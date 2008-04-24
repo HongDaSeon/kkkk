@@ -1,0 +1,211 @@
+
+body
+{
+	background-repeat:repeat-x;
+	background-attachment:fixed;
+  font-family:  Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+  font-size:100%;
+  background-color:#fdf39a;
+
+  /*	font-family:Kristen ITC;*/
+}
+
+#banniere
+{
+border:none;
+
+text-decoration:none;
+
+}
+
+#block_title
+{
+	width:900px;
+	margin-left: auto;
+  margin-right: auto;
+	background-color:#000000;
+	-moz-border-radius:15px;
+	text-align:center;
+
+}
+
+#textacc
+{
+  font-size:large;
+  font-weight:bold;
+  text-align:justify;
+}
+
+#clean
+{
+  clear:left;
+}
+/*  css pour les images qui defillent  */
+
+.imageSlideshowHolder img
+{
+		position:absolute;
+		left:10px;
+		top:2px;
+}
+
+.imageSlideshowHolder
+{
+		margin:10px;	/* "Air" */
+		width:290px;	/* Image width */
+		height:290px;	/* Image height */		
+		position:relative;
+    padding:3px;
+}
+
+
+.shadetabs{
+width:800px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.shadetabs li{
+float:left;
+list-style-type:none;
+}
+
+
+.shadetabs li a 
+{
+display:block;
+text-decoration:none;
+color:black;
+background-color:#fc573c;
+border-bottom:3px #fbe73f solid;
+border-top:3px #fbe73f solid;
+padding-left:3px;
+padding-right:3px;
+padding-bottom:1px;
+padding-top:1px;
+margin:3px;
+}
+
+.shadetabs li a:hover
+{
+color:#fc573c;
+background-color:black;
+}
+
+
+.include
+{
+border-width:2px;
+border:1px #e60000 dashed;
+width:40%;
+margin-left:auto;
+margin-right:auto;
+background-color:#ececec;
+padding-left:1.5%;
+padding-right:1.5%;
+}
+
+.news h3
+{
+   margin:auto;
+   font-weight: bold;
+   font-size: 110%;
+   color: #FFFFFF;
+   background-color:#e60000;
+   text-align:center;
+   margin-top: 20px;
+
+}
+
+.news h3:hover
+{
+   color:#e60000;
+   background-color:#ececec;
+}
+
+
+.block_droite
+{
+  float:right;
+  text-align:center;
+  width:20%;
+  margin-right:8%;
+  background-color:#ffd83f;
+  border:1px #e60000 dashed;
+}
+
+#sous_block_droite
+{
+
+}
+
+#titre_block
+{
+  text-decoration:none;
+  color:black;
+  background-color:#fc573c;
+  margin:3px;
+  padding-left:3px;
+  padding-right:3px;
+  padding-bottom:3px;
+
+}
+
+#block_gauche
+{
+  float:left;
+  text-align:center;
+  width:15%;
+  margin-left:13%;
+  background-color:#ffd83f; 
+  border:1px #e60000 dashed;
+
+}
+
+table
+{
+  margin:auto; 
+}
+td
+{
+  text-align:center;
+  padding:5px;
+}
+
+caption
+{
+   margin:auto;
+   font-weight: bold;
+   font-size: 110%;
+   color: #FFFFFF;
+   background-color:#e60000;
+   margin-bottom: 20px;
+   text-align:center;
+}
+
+caption:hover
+{
+   color:#e60000;
+   background-color:#ececec;
+}
+
+
+legend            /* pour les fomulaires. */
+{
+   color: #e60000;
+   font-weight: bold;
+   background-color:#ececec;
+}
+
+fieldset
+{
+  	border-style:dotted;
+  	border-color:#e60000;
+}
+
+#block_foot
+{	
+	-moz-border-radius:15px;
+	float:none;
+	text-decoration:none;
+}

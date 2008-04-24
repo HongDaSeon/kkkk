@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#clean{
+
+clear:both;
+
+}
+
+body {
+	margin: 0;
+	background: #FFFFFF url(../images/img01.png) repeat-x;
+	font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+#header {
+	width: 1000px;
+	height: 140px;
+	margin: 0 auto;
+}
+
+#logo {
+	float: left;
+	width: 240px;
+	height: 50px;
+	background-color:black;
+}
+
+#logo img
+{
+border:none;
+text-decoration:none;
+}
+
+
+#textacc
+{
+  font-size:medium;
+  text-align:justify;
+}
+
+
+#menu {
+	float: right;
+}
+
+#menu ul {
+	margin: 0;
+	padding-top: 76px;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 24px;
+	margin-left: 10px;
+	padding: 15px;
+	background: url(../images/img02.png) repeat-x;
+	text-decoration: none;
+	font-weight: bold;
+	color: #000000;
+}
+
+#menu a:hover {
+	background-image: url(../images/img03.png);
+	color: #FFFFFF;
+}
+
+
+
+.boxed {
+}
+
+.boxed .title {
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+.boxed .content {
+	padding: 20px;
+	background: url(../images/img05.jpg) repeat-x;
+}
+
+
+.imageSlideshowHolder img
+{
+		position:absolute;
+		left:0px;
+		top:0px;
+}
+
+.imageSlideshowHolder
+{
+		margin:5px;	/* "Air" */
+		width:290px;	/* Image width */
+		height:290px;	/* Image height */		
+		position:relative;
+    padding:3px;
+}
+
+
+.include
+{
+	width: 760px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+.news h3
+{
+   margin:auto;
+   font-weight: bold;
+   font-size: 110%;
+   color: #FFFFFF;
+   background-color:#e60000;
+   text-align:center;
+   margin-top: 20px;
+
+}
+
+.news h3:hover
+{
+   color:#e60000;
+   background-color:#ececec;
+}
+
+
+#block_droite
+{
+	float: right;
+	width: 220px;
+}
+
+table
+{
+  margin:auto; 
+}
+td
+{
+  text-align:center;
+  padding:5px;
+}
+
+caption
+{
+   margin:auto;
+   font-weight: bold;
+   font-size: 110%;
+   color: #FFFFFF;
+   background-color:#e60000;
+   margin-bottom: 20px;
+   text-align:center;
+}
+
+caption:hover
+{
+   color:#e60000;
+   background-color:#ececec;
+}
+
+
+legend            /* pour les fomulaires. */
+{
+   color: #e60000;
+   font-weight: bold;
+   background-color:#ececec;
+}
+
+fieldset
+{
+  	border-style:dotted;
+  	border-color:#e60000;
+}
+
+#block_foot
+{	
+	-moz-border-radius:15px;
+	float:none;
+	text-decoration:none;
+}
