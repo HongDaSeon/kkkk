@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+   <head>
+        <title>Kaliente, toujours plus show !!</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="bde, BDE, Kaliente, KALIENTE, kaliente, liste bde, eisti, eisti.fr, fintz, liste, campagne, campagne bde, cergy, association, cergy pontoise, 95, Cergy, région parisienne, region parisienne, val d'oise, Val d'oise" />
+
+		<link rel="stylesheet" media="screen" type="text/css" title="Kaliente" href="css/index.css" />		
+          
+    <script type="text/javascript" src="js/image-slideshow-4.js"></script>
+
+		
+		
+    </head>   
+    
+    
+      <body>
+
+
+      <div id='block_title'>
+      
+      
+      <a id='banniere'href="index.php"><img id='banniere' src="img/kaliente.png" alt="Kaliente, toujours plus show !!" /></a>
+      </div>
+            
+           
+           
+      <ul id="maintab" class="shadetabs">
+      <li id='news'><a href="index.php?news" rel="ajaxcontentarea">Les news</a></li>
+      <li id='equipe'><a href="index.php?equipe" rel="ajaxcontentarea">L'équipe Kaliente</a></li>
+      <li id='partenaire'><a href="index.php?partenaires" rel="ajaxcontentarea">Nos partenaires</a></li>
+      <li id='projet'><a href="index.php?projet" rel="ajaxcontentarea">Notre projet</a></li>
+      <li id='livre'><a href="index.php?livre" rel="ajaxcontentarea">Le Livre d'or</a></li>
+      <li id='poker'><a href="index.php?poker" rel="ajaxcontentarea">Inscription Poker</a></li>
+      <li id='album'><a href="index.php?test" rel="ajaxcontentarea">Test-Toi!</a></li>
+      </ul>      
+      <div id='clean'> <br /></div>
+      
+            
+<div class='block_droite'>
+
+<!--<img src='img/grand_bouton_album.png' alt='Kaliente' />-->
+<span id='titre_block'>L'album de famille</span>
+
+		<div class="imageSlideshowHolder" id="imageSlideshowHolder">	
+		<p>	
+		<?php 
+		for($i=1;$i<101;$i++)
+		{ ?>
+			<img src="img/photo_petit/image<?php echo rand(1,100);?>.jpg">	
+			<?php
+		}
+			?>
+
+</p>
+		</div>
+		
+				<script type="text/javascript">
+		initImageGallery('imageSlideshowHolder')
+		</script>
+
+
+<div id='sous_block_droite'>
+
+<span id='titre_block'>Vidéo de famille</span>
+<br />
+<object type="application/x-shockwave-flash" data="swf/player_flv_multi.swf" width="320" height="240">
+    <param name="movie" value="swf/player_flv_multi.swf" />
+    <param name="allowFullScreen" value="true" />
+    <param name="FlashVars" value="flv=http%3A//anarchyisborn.free.fr/katana.flv&amp;title=Présentation des membres&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400" />
+</object>
+
+</div>
+</div>
+<div id='block_gauche'>
+
+<span id='titre_block'>Programme des journées</span>
+
+<p id='text_rand_left'>
+Salut a tous! 
+<ul>
+Venez découvrir : 
+
+<li>Le Poker</li>
+<li>La plage</li>
+<li>La piscine</li>
+<li>La bouffe</li>
+
+</ul>
+</p>
+</div>
+
+
+
+
+            
+<div  id='ajaxcontentarea' class='include'>  
+    <?php
+    
+   $lien = array('news' => 'news.php',
+					'equipe' => 'equipe.html',
+					'suisunrebel' => 'rebelz.html',
+					'partenaires' => 'partenaires.html',
+					'livre' => 'livredor.php',
+					'projet' => 'projet.html',
+					'poker' => 'inscription_poker.php',
+					'test' => 'test.html'
+					);
+    
+    $a = key($_GET);
+      if(isset($lien[$a]))
+      include $lien[$a];
+      else include 'acceuil.html';
+    ?>
+    
+    </div>
+
+</div>
+
+
+ 
+ 
+      <div id='block_foot'>
+      
+      <a href="http://kthxbye"><img class="spons" src="/img/spons/sg.jpg" alt="kthxbye" /> </a>
+      
+      </div>
+      
+      
+      
+      </body>
+
+
+</html>
