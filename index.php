@@ -34,6 +34,8 @@
 
 
 <div id='content'>            
+ 
+ 
   <div id='sidebar'>
 		<div class='boxed'>
 			<h2 class='title'>L'album de famille</h2>
@@ -64,13 +66,13 @@
         <param name="FlashVars" value="flv=http%3A//anarchyisborn.free.fr/katana.flv&amp;title=Présentation des membres&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400" />
         </object>
 
-				</div><!--fin du lecteur-->
+			</div><!--fin du lecteur-->
 		</div><!--fin du content-->
 		</div><!--fin du boxed-->
 
 
 
-</div> <!--fin du block droite-->
+    </div> <!--fin du sidebar-->
 
             
 <div class='include'>  
