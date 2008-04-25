@@ -1,83 +1,3 @@
-
-    <p class="pages">
-
- 
-
-<?php
-
-mysql_connect("db1094.1and1.fr", "dbo216509682", "x63ZBa7Y");
-
-mysql_select_db("db216509682");
- 
-if (isset($_POST['pseudo']) AND isset($_POST['promo']) AND isset($_POST['message']))
-
-{
-
-    $pseudo = mysql_real_escape_string(htmlspecialchars($_POST['pseudo'])); 
-    $promo = mysql_real_escape_string(htmlspecialchars($_POST['promo'])); 
-    $message = mysql_real_escape_string(htmlspecialchars($_POST['message'])); 
-    $message = nl2br($message);
-
-
-    mysql_query("INSERT INTO livreor VALUES('', '$pseudo', '$promo', '$message')");
-
-}
-
- 
-
-$nombreDeMessagesParPage = 10;
-$retour = mysql_query('SELECT COUNT(*) AS nb_messages FROM livreor');
-$donnees = mysql_fetch_array($retour);
-$totalDesMessages = $donnees['nb_messages'];
-$nombreDePages  = ceil($totalDesMessages / $nombreDeMessagesParPage);
-echo 'Page : ';
-
-for ($i = 1 ; $i <= $nombreDePages ; $i++)
-
-{
-
-    echo '<a href="index.php?livre&page=' . $i . '">' . $i . '</a> ';
-
-}
-
-?>
-
- 
-
-</p>
-
- 
-
-<?php
-
-if (isset($_GET['page']))
-{
-        $page = $_GET['page'];
-}
-
-else
-{
-        $page = 1;
-}
-
-$premierMessageAafficher = ($page - 1) * $nombreDeMessagesParPage;
-
-$reponse = mysql_query('SELECT * FROM livreor ORDER BY id DESC LIMIT ' . $premierMessageAafficher . ', ' . $nombreDeMessagesParPage);
-
-
-while ($donnees = mysql_fetch_array($reponse))
-
-{
-  echo '<p><strong>' . $donnees['pseudo'] .' ('. $donnees['promo'] . ') ' . '</strong> a écrit :<br />' . stripslashes($donnees['message']) . '</p>';
-}
-
- 
-
-mysql_close();
-
-?>
-<br /><br />
-
   		<div class='boxed'>
 			<h2 class='title'>Un message à faire passer? </h2>
 			<div class='content'>
@@ -111,3 +31,88 @@ mysql_close();
     </form>
 
 </div>
+
+
+    <p class="pages">
+
+ 
+
+<?php
+
+mysql_connect("db1094.1and1.fr", "dbo216509682", "x63ZBa7Y");
+
+mysql_select_db("db216509682");
+
+trim($_POST['pseudo']);
+trim($_POST['promo']);
+trim($_POST['message']);
+
+if (!empty($_POST['pseudo']) AND !empty($_POST['promo']) AND !empty($_POST['message']))
+
+{
+
+    $pseudo = mysql_real_escape_string(htmlspecialchars($_POST['pseudo'])); 
+    $promo = mysql_real_escape_string(htmlspecialchars($_POST['promo'])); 
+    $message = mysql_real_escape_string(htmlspecialchars($_POST['message'])); 
+    $message = nl2br($message);
+
+
+    mysql_query("INSERT INTO livreor VALUES('', '$pseudo', '$promo', '$message')");
+
+}
+
+ 
+
+$nombreDeMessagesParPage = 10;
+$retour = mysql_query('SELECT COUNT(*) AS nb_messages FROM livreor');
+$donnees = mysql_fetch_array($retour);
+$totalDesMessages = $donnees['nb_messages'];
+$nombreDePages  = ceil($totalDesMessages / $nombreDeMessagesParPage);
+echo 'Page : ';
+
+for ($i = 1 ; $i <= $nombreDePages ; $i++)
+
+{
+
+    echo '<a href="index.php?livre&page=' . $i . '">' . $i . '</a> ';
+
+}
+
+?>
+
+ <br />
+
+</p>
+
+ 
+
+<?php
+
+if (isset($_GET['page']))
+{
+        $page = $_GET['page'];
+}
+
+else
+{
+        $page = 1;
+}
+
+$premierMessageAafficher = ($page - 1) * $nombreDeMessagesParPage;
+
+$reponse = mysql_query('SELECT * FROM livreor ORDER BY id DESC LIMIT ' . $premierMessageAafficher . ', ' . $nombreDeMessagesParPage);
+
+
+while ($donnees = mysql_fetch_array($reponse))
+
+{
+  echo '<p><span class="pseudo_livre">' . $donnees['pseudo'] .' ('. $donnees['promo'] . ') ' . '</span> :<br /> <p class="alinea">' . stripslashes($donnees['message']) . '</p></p>';
+}
+
+ 
+
+mysql_close();
+
+?>
+<br /><br />
+
