@@ -9,13 +9,18 @@ $retour = mysql_query('SELECT * FROM news ORDER BY id DESC LIMIT 0, 5');
 while ($donnees = mysql_fetch_array($retour))
 {
 ?>
+  		<div class='boxed'>
 
 <div class="news">
     <h3>
-        <?php echo $donnees['titre']; ?>
-        <em>le <?php echo date('d/m/Y à H\hi', $donnees['timestamp']); ?> 
-        par <?php echo $donnees['pseudo']   ?></em>
+    			<h2 class='title'><?php echo $donnees['titre']; ?></h2>
+			<div class='content'>
+
+     <?php /*   <em>le <?php echo date('d/m/Y à H\hi', $donnees['timestamp']); ?> 
+        <?php echo 'par $donnees['pseudo']' ?></em>
         
+        
+        */?>
 
     </h3>
     <p>
@@ -26,7 +31,7 @@ while ($donnees = mysql_fetch_array($retour))
     </p>
 
 </div>
-
+</div>
 <?php
 }
 ?>
