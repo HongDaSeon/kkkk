@@ -24,7 +24,7 @@
 <br />
   <label for="mail">eMail : </label> <input type="text" name="mail" id='mail' /><br />
 <br />
-  <label for="password">Mot de passe fournit sur le mail de votre webmail eistiens : </label><br /> <input type="password" name="password" id='password' />
+  <label for="password">Mot de passe que l'equipe Kaliente vous a fournit sur votre webmail</label><br /> <input type="password" name="password" id='password' />
 
 <br />
 <br />

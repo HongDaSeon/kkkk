@@ -10,6 +10,35 @@ body {
 	color: #333333;
 }
 
+
+a {
+	text-decoration: none;
+	color: #ff8307;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+
+.alinea{
+margin-left:30px;
+margin-top:3px;
+}
+
+.pseudo_livre
+{
+  margin-top:15px;
+	font-weight:bold;
+	color:#ff8307;
+}
+
+.pages
+{
+  text-align:right;
+  font:110%;
+}
+
 #header {
 	width: 1000px;
 	height: 140px;
@@ -153,23 +182,13 @@ text-decoration:none;
 .include
 {
 	float: left;
-	width: 650px;
+	width: 670px;
 }
 
-.news h3
-{
-   margin:auto;
-   font-weight: bold;
-   font-size: 100%;
-   color: #FFFFFF;
-   text-align:center;
-   margin-top: 20px;
-
-}
 
 #sidebar {
 	float: right;
-	width: 350px;
+	width: 360px;
 	margin-left:5px;
 }
 
