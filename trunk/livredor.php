@@ -77,11 +77,14 @@ while ($donnees = mysql_fetch_array($reponse))
 mysql_close();
 
 ?>
+<br /><br />
+
+  		<div class='boxed'>
+			<h2 class='title'>Un message à faire passer? </h2>
+			<div class='content'>
 
    <form method="post" action="index.php?livre">
       <fieldset>
-
-       <legend>Dites le nous que vous votez pour nous!</legend>
         <p>
 
             <label for="pseudo">Pseudo :</label>
@@ -98,13 +101,14 @@ mysql_close();
        </select>
        <br />
 
-            Message :<br />
+           <label for='messsage'> Message :</label>
 
-            <textarea name="message" rows="8" cols="60"></textarea><br />
+            <textarea name="message" rows="5" cols="60"></textarea><br />
 
-            <input type="submit" value="Envoyer" />
+            <input id="inputsubmit1" type="submit" name="inputsubmit1" value="Envoyer" />
 
         </p>
       </fieldset>
     </form>
 
+</div>

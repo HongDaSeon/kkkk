@@ -1,3 +1,6 @@
+  		<div class='boxed'>
+			<h2 class='title'>Inscription pour le tournois de poker</h2>
+			<div class='content'>
 
 <form method="post" action="index.php?poker">
       <fieldset>
@@ -25,7 +28,7 @@
 
 <br />
 <br />
-            <input type="submit" value="Envoyer" />
+            <input id="inputsubmit1" type="submit" name="inputsubmit1" value="Envoyer" />
 
 </p>
 
@@ -78,7 +81,7 @@ if (
         }
         else
         {
-        echo "utilisateur déjà enregistré";
+        echo "Utilisateur déjà enregistré";
         echo "si ce n'est pas le cas, pas de problème, vous pourrez vous inscrire avec nous lors de la journée de campagne !<br /> ou m'envoyer un mail a anarchyisborn@free.fr";
         }
 
@@ -93,3 +96,12 @@ mysql_close();
 
 
 ?>
+<br />
+  		<div class='boxed'>
+			<h2 class='title'>Tu veux gagner le voyage? Poker-academie est fait pour toi!</h2>
+			<div class='content'>
+
+Un text sur poker academie <br />
+<a href='http://www.poker-academie.com/' id='imgpoker' ><img src='img/partenaires/poker.png' alt='Site Poker Academie'></a>
+      </div>
+</div>
