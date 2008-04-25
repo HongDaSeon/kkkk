@@ -200,7 +200,46 @@ th td
 margin-left:12px;
 }
 
-legend            /* pour les fomulaires. */
+
+fieldset {
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+label {
+	display: block;
+}
+
+input, select, textarea {
+	margin-bottom: 10px;
+	padding: 2px 5px;
+	border: 1px solid #ffb971;
+	font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+#inputsubmit1
+{
+	margin: 0;
+	padding: 0;
+	background: url(../images/img05.jpg) repeat-x;
+}
+
+a img
+{
+border:none;
+text-decoration:none;
+}
+
+#imgpoker
+{
+text-align:center;
+}
+
+/*legend
 {
    color: #e60000;
    font-weight: bold;
@@ -211,11 +250,5 @@ fieldset
 {
   	border-style:dotted;
   	border-color:#e60000;
-}
+}*/
 
-#block_foot
-{	
-	-moz-border-radius:15px;
-	float:none;
-	text-decoration:none;
-}
