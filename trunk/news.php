@@ -1,8 +1,7 @@
 <?php
+mysql_connect("db1094.1and1.fr", "dbo216509682", "x63ZBa7Y");
 
-mysql_connect("localhost", "root", "");
-
-mysql_select_db("kaliente");
+mysql_select_db("db216509682");
 
 $retour = mysql_query('SELECT * FROM news ORDER BY id DESC LIMIT 0, 5');
 
