@@ -162,18 +162,11 @@ text-decoration:none;
    font-weight: bold;
    font-size: 110%;
    color: #FFFFFF;
-   background-color:#e60000;
+   background:url(../images/img1b.png) repeat-x;
    text-align:center;
    margin-top: 20px;
 
 }
-
-.news h3:hover
-{
-   color:#e60000;
-   background-color:#ececec;
-}
-
 
 #sidebar {
 	float: right;
@@ -195,19 +188,17 @@ caption
 {
    margin:auto;
    font-weight: bold;
-   font-size: 110%;
+   font-size: 100%;
    color: #FFFFFF;
-   background-color:#e60000;
+   background:url(../images/img1b.png) repeat-x;
    margin-bottom: 20px;
    text-align:center;
 }
 
-caption:hover
+th td
 {
-   color:#e60000;
-   background-color:#ececec;
+margin-left:12px;
 }
-
 
 legend            /* pour les fomulaires. */
 {
