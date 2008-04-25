@@ -19,23 +19,22 @@
            
    <div id='header'>
    <div id='logo'>
-   <a href="index.php"><img src="img/kaliente.png" alt="Kaliente, toujours plus show !!" /></a>
+   <a href="index.php"><img src="img/kaliente_noir.png" alt="Kaliente, toujours plus show !!" /></a>
    </div>
    <div id='menu'>
-      <ul class="shadetabs">
-      <li><a href="index.php?news">News</a></li>
+      <ul>
+      <li><a href="index.php?news">Le Programme</a></li>
       <li><a href="index.php?equipe">L'équipe</a></li>
-      <li><a href="index.php?partenaires">Partenaires</a></li>
+      <li><a href="index.php?partenaires">Nos Partenaires</a></li>
       <li><a href="index.php?projet">Notre projet</a></li>
       <li><a href="index.php?livre">Livre d'or</a></li>
-      <li><a href="index.php?test">Test-Toi!</a></li>
       </ul>   
     </div> 
    </div>   
 
-<div id='clean'></div>
+
 <div id='content'>            
-  <div id='block_droite'>
+  <div id='sidebar'>
 		<div class='boxed'>
 			<h2 class='title'>L'album de famille</h2>
 			<div class='content'>
@@ -72,7 +71,6 @@
 
 
 </div> <!--fin du block droite-->
-</div> <!--fin du content-->
 
             
 <div class='include'>  
@@ -92,21 +90,10 @@
       include $lien[$a];
       else include 'acceuil.html';
     ?>
-    
-    </div>
+</div>  
 
-</div>
+</div> <!--fin du content-->
 
-
- 
- 
-      <div id='footer'>
-      
-      <a href="http://kthxbye"><img class="spons" src="/img/spons/sg.jpg" alt="kthxbye" /> </a>
-      
-      </div>
-      
-      
       
       </body>
 
