@@ -96,12 +96,15 @@ mysql_close();
 
 
 ?>
+      </div>
+</div>
+
 <br />
   		<div class='boxed'>
 			<h2 class='title'>Tu veux gagner le voyage? Poker-academie est fait pour toi!</h2>
 			<div class='content'>
 
 Un text sur poker academie <br />
-<a href='http://www.poker-academie.com/' id='imgpoker' ><img src='img/partenaires/poker.png' alt='Site Poker Academie'></a>
+<a href='http://www.poker-academie.com/' id='imgpoker' ><img src='img/partenaires/poker.png' alt='Site Poker Academie'/></a>
       </div>
 </div>

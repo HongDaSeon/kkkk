@@ -11,7 +11,6 @@ while ($donnees = mysql_fetch_array($retour))
   		<div class='boxed'>
 
 <div class="news">
-    <h3>
     			<h2 class='title'><?php echo $donnees['titre']; ?></h2>
 			<div class='content'>
 
@@ -21,7 +20,6 @@ while ($donnees = mysql_fetch_array($retour))
         
         */?>
 
-    </h3>
     <p>
     <?php
     $contenu = nl2br(stripslashes($donnees['contenu']));
@@ -29,6 +27,7 @@ while ($donnees = mysql_fetch_array($retour))
     ?>
     </p>
 
+</div>
 </div>
 </div>
 <?php
