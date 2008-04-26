@@ -44,7 +44,7 @@
 		<?php 
 		for($i=1;$i<101;$i++)
 		{ ?>
-			<img src="img/photo_petit/image<?php echo rand(1,100);?>.jpg">	
+			<img src="img/photo_petit/image<?php echo rand(1,100);?>.jpg" alt='ImageA'/>	
 			<?php
 		}
 			?>

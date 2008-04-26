@@ -106,7 +106,7 @@ $reponse = mysql_query('SELECT * FROM livreor ORDER BY id DESC LIMIT ' . $premie
 while ($donnees = mysql_fetch_array($reponse))
 
 {
-  echo '<p><span class="pseudo_livre">' . $donnees['pseudo'] .' ('. $donnees['promo'] . ') ' . '</span> :<br /> <p class="alinea">' . stripslashes($donnees['message']) . '</p></p>';
+  echo '<span class="pseudo_livre">' . $donnees['pseudo'] .' ('. $donnees['promo'] . ') ' . '</span> :<br /> <p class="alinea">' . stripslashes($donnees['message']) . '</p>';
 }
 
  
