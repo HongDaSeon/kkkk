@@ -1,0 +1,9 @@
+A = foutrier
+B = anne-flore
+C = guy doriot
+D = guy elec
+E = Sergent Monique
+F = ?
+G = Nga
+H = Prof anglais grosse
+I = VF
