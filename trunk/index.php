@@ -9,6 +9,7 @@
 		<link rel="stylesheet" media="screen" type="text/css" title="Kaliente" href="css/index.css" />		
           
     <script type="text/javascript" src="js/image-slideshow-4.js"></script>
+    <script type="text/javascript" src="js/drag-drop-custom.js"></script>
 
 		
 		
