@@ -21,6 +21,14 @@ a:hover {
 	color: #000000;
 }
 
+
+#predixio
+{
+float: left;
+height:140px;
+width:300px;
+}
+
 .alinea{
 margin-left:30px;
 margin-top:3px;
@@ -269,4 +277,82 @@ fieldset
   	border-style:dotted;
   	border-color:#e60000;
 }*/
+
+
+/* pour le test : */
+
+.include #test
+{
+	float: left;
+	width: 10px;
+}
+
+
+#test	#mainContainer{
+		width:900px;
+		margin:0 auto;
+		margin-top:10px;
+		padding:2px;
+	}
+	
+#test	#nom_prof{
+		width:737px;
+		float:left;
+		border:1px solid #000;
+		background-color:#E2EBED;
+		padding:3px;
+		height:90px;
+	}
+#test	#photo_prof{
+		width:800px;
+		float:left;
+		margin:2px;
+		height:500px;
+	}	
+#test	.dragableBox,.dragableBoxRight{
+		width:150px;
+		height:20px;
+		border:1px solid #000;
+		background-color:#FFF;		
+		margin-bottom:5px;
+		float:left;
+		padding:10px;
+		font-weight:bold;
+		text-align:center;
+	}
+#test	div.dragableBoxRight{
+		height:250px;
+		width:170px;
+		float:left;
+		margin-right:5px;
+		padding:5px;
+		background-color:#E2EBED;
+	}
+#test	.dropBox{
+		width:190px;
+		border:1px solid #000;
+		background-color:#E2EBED;
+		height:400px;
+		margin-bottom:10px;
+		padding:3px;
+    overflow:auto;
+	}		
+#test	a{
+		color:#F00;
+	}
+		
+#test	.clear{
+		clear:both;
+	}
+	
+#test	img{
+		border:0px;
+	}	
+	
+#test	.dragableBoxRight img
+	{
+    width:170px;
+    height:200px;
+	}
+
 
