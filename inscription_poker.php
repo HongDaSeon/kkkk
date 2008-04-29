@@ -103,8 +103,11 @@ mysql_close();
   		<div class='boxed'>
 			<h2 class='title'>Tu veux gagner le voyage? Poker-academie est fait pour toi!</h2>
 			<div class='content'>
-
-Un text sur poker academie <br />
-<a href='http://www.poker-academie.com/' id='imgpoker' ><img src='img/partenaires/poker.png' alt='Site Poker Academie'/></a>
+			<br />
+<a href='http://www.poker-academie.com/' id='imgpoker' ><img class='img_left' src='img/partenaires/poker.png' alt='Site Poker Academie'/></a>
+<span class='textacc'>"Poker Académie, c'est le "must" du Poker : + de 15.000 membres, des coachings interactifs tous les soirs, + de 100h de vidéos commentées,
+ des centaines d'articles techniques...
+ mais aussi des tournois avec prix ajoutés réservés aux membres ainsi 
+ qu'un forum très actif ! Et tout ça, c'est 100% gratuit !"</span><br /><br />
       </div>
 </div>

@@ -14,11 +14,14 @@
 			<div id="box106" class="dragableBoxRight"><img src='img/prof/G.jpg' alt='dsl ca foire'/></div>
 			<div id="box101" class="dragableBoxRight"><img src='img/prof/A.jpg' alt='dsl ca foire'/></div>
 			<div id="box107" class="dragableBoxRight"><img src='img/prof/H.jpg' alt='dsl ca foire'/></div>
+			<div id="box110" class="dragableBoxRight"><img src='img/prof/K.jpg' alt='dsl ca foire'/></div>
 			<div id="box104" class="dragableBoxRight"><img src='img/prof/D.jpg' alt='dsl ca foire'/></div>
 			<div id="box105" class="dragableBoxRight"><img src='img/prof/E.jpg' alt='dsl ca foire'/></div>
 			<div id="box102" class="dragableBoxRight"><img src='img/prof/B.jpg' alt='dsl ca foire'/></div>
 			<div id="box108" class="dragableBoxRight"><img src='img/prof/I.jpg' alt='dsl ca foire'/></div>
 			<div id="box103" class="dragableBoxRight"><img src='img/prof/C.jpg' alt='dsl ca foire'/></div>
+			<div id="box109" class="dragableBoxRight"><img src='img/prof/J.jpg' alt='dsl ca foire'/></div>
+
 		</div>
 
 				<div id="nom_prof">
@@ -31,14 +34,14 @@
 				<div class="dragableBox" id="box6">Nga Nguyen</div>
 				<div class="dragableBox" id="box7">Michelle Majdoub </div>
 				<div class="dragableBox" id="box8">Valery Frémaux</div>
+				<div class="dragableBox" id="box9">Hervé De Milleville</div>
+				<div class="dragableBox" id="box10">Rachid Chelouah</div>
 			</div>
 		</div>
 
 		<div class="clear"></div>
 		<div class="konaBody"></div>
 </div>
-
-<div id="debug"></div>
 </div></div>
 <script type="text/javascript">
 
@@ -76,6 +79,8 @@ dragDropObj.addSource('box5',true);	// Make <div id="box4"> dragable. slide item
 dragDropObj.addSource('box6',true);	// Make <div id="box4"> dragable. slide item back into original position after drop
 dragDropObj.addSource('box7',true);	// Make <div id="box4"> dragable. slide item back into original position after drop
 dragDropObj.addSource('box8',true);	// Make <div id="box4"> dragable. slide item back into original position after drop
+dragDropObj.addSource('box9',true);	// Make <div id="box4"> dragable. slide item back into original position after drop
+dragDropObj.addSource('box10',true);	// Make <div id="box4"> dragable. slide item back into original position after drop
 
 
 // Assigning drop events on the photo_prof
@@ -87,6 +92,8 @@ dragDropObj.addTarget('box105','dropItems'); // Set <div id="leftColumn"> as a d
 dragDropObj.addTarget('box106','dropItems'); // Set <div id="leftColumn"> as a drop target. Call function dropItems on drop
 dragDropObj.addTarget('box107','dropItems'); // Set <div id="leftColumn"> as a drop target. Call function dropItems on drop
 dragDropObj.addTarget('box108','dropItems'); // Set <div id="leftColumn"> as a drop target. Call function dropItems on drop
+dragDropObj.addTarget('box109','dropItems'); // Set <div id="leftColumn"> as a drop target. Call function dropItems on drop
+dragDropObj.addTarget('box110','dropItems'); // Set <div id="leftColumn"> as a drop target. Call function dropItems on drop
 dragDropObj.addTarget('nom_prof','dropItems'); // Set <div id="leftColumn"> as a drop target. Call function dropItems on drop
 
 dragDropObj.init();	// Initizlizing drag and drop object
