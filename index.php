@@ -58,7 +58,7 @@
 		</script>
 		
   		<div class='boxed'>
-			<h2 class='title'>Les vidéo de famille</h2>
+			<h2 class='title'>Les vidéos de famille</h2>
 			<div class='content'>
 			<div class='video'>	
         <object type="application/x-shockwave-flash" data="swf/player_flv_multi.swf" width="320" height="240">
