@@ -14,7 +14,7 @@
 $rep = 'thumb/'; 
 $dir = opendir($rep);
 
-echo '<div class="center">';
+echo "<div class='center'>";
 echo '<table class="container">';
 echo '<tr>';
 echo '<td>';
