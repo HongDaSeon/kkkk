@@ -49,7 +49,7 @@
 				</div>
 			</div>
 			
-		<div clas='include'>
+		<div class='include'>
 	
    <?php 
 //fichier de creation de la gallerie
@@ -71,12 +71,10 @@ while ($f = readdir($dir)) {
 		echo "</td></tr></table>";
 		echo "<div class='smalldesc'>".$f."</div>";
 		echo "</td>";
-		//echo $i." ";
 		$i++;
    }
    elseif(is_file($rep.$f) AND $f != 'Thumbs.db' AND $i = 5) {
 		$i = 0;
-		//echo $i." ";
 		echo "</tr><tr>";
 		echo "<td>";
 		echo '<table class="dia"><tr><td>';
@@ -88,7 +86,12 @@ while ($f = readdir($dir)) {
 		$i++;
    }
 } 
-
+echo '</tr>';
+echo '</table>';
+echo '</div>';
 ?>
 
-
+			</div>
+		</div>
+	</body>
+</html>
