@@ -10,7 +10,14 @@
           
     <script type="text/javascript" src="js/image-slideshow-4.js"></script>
     <script type="text/javascript" src="js/drag-drop-custom.js"></script>
-
+	
+	
+    <link rel="stylesheet" type="text/css" href="lightbox.css" />
+    <script type="text/javascript" src="lightbox.js"></script>
+    <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />    
+    <script type="text/javascript" src="js/prototype.js"></script>
+    <script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
+    <script type="text/javascript" src="js/lightbox.js"></script> 
 		
 		
     </head>   
@@ -29,6 +36,7 @@
       <li><a href="index.php?partenaires">Nos Partenaires</a></li>
       <li><a href="index.php?projet">Notre projet</a></li>
       <li><a href="index.php?livre">Livre d'or</a></li>
+	  <li><a href="index.php?galerie">Galerie (test)</a></li>
       </ul>   
     </div> 
    </div>   
@@ -86,7 +94,8 @@
 					'livre' => 'livredor.php',
 					'projet' => 'projet.html',
 					'poker' => 'inscription_poker.php',
-					'test' => 'test.html'
+					'test' => 'test.html',
+					'galerie' => 'galerie.php'
 					);
     $a = key($_GET);
       if(isset($lien[$a]))
