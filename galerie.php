@@ -1,4 +1,4 @@
-
+<table>
 
 <?php
 // page galerie (test)
@@ -33,5 +33,6 @@ while ($f = readdir($dir)) {
 
 ?>
 
+</table>
 
 
