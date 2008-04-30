@@ -11,7 +11,7 @@
     <script type="text/javascript" src="js/image-slideshow-4.js"></script>
     <script type="text/javascript" src="js/drag-drop-custom.js"></script>
 	
-	
+	<!-- inclusion des liens pour l'affichage de la galerie-->
     <link rel="stylesheet" type="text/css" href="lightbox.css" />
     <script type="text/javascript" src="lightbox.js"></script>
     <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />    
