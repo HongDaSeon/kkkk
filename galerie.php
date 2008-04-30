@@ -1,3 +1,5 @@
+
+
 <?php
 // page galerie (test)
 
@@ -18,7 +20,7 @@ echo '<tr>';
 echo '<td>';
 
 while ($f = readdir($dir)) {
-   if(is_file($rep.$f)) {
+   if(is_file($rep.$f) AND $f != 'Thumbs.db') {
 		echo "<td>";
 		echo '<table class="dia"><tr><td>';
 		echo "<a href='original/".$f."' title='".$f."' rel='lightbox[1]' />";
@@ -30,4 +32,6 @@ while ($f = readdir($dir)) {
 } 
 
 ?>
+
+
 
