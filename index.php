@@ -36,7 +36,7 @@
       <li><a href="index.php?partenaires">Nos Partenaires</a></li>
       <li><a href="index.php?projet">Notre projet</a></li>
       <li><a href="index.php?livre">Livre d'or</a></li>
-	  <li><a href="index.php?galerie">Galerie (test)</a></li>
+	  <li><a href="./galerie.php">Galerie (test)</a></li>
       </ul>   
     </div> 
    </div>   
@@ -94,8 +94,7 @@
 					'livre' => 'livredor.php',
 					'projet' => 'projet.html',
 					'poker' => 'inscription_poker.php',
-					'test' => 'test.html',
-					'galerie' => 'galerie.php'
+					'test' => 'test.html'
 					);
     $a = key($_GET);
       if(isset($lien[$a]))
