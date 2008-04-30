@@ -4,10 +4,10 @@
 // page galerie (test)
 
 // Connection à MySQL
-mysql_connect("localhost", "root", "");
+//mysql_connect("localhost", "root", "");
 
 // Selection de la BDD
-mysql_select_db("kaliente");
+//mysql_select_db("kaliente");
 
 //fichier de creation de la gallerie
 
