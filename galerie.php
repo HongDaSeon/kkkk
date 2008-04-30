@@ -40,29 +40,30 @@
 		
 		<!-- Début du content-->
 		<div id='content'>   
-		
+			<div id='sidebar'>
+				<div class='boxed'>
+					<h2 class='title'>Menu</h2>
+					<div class='content'>
+						<a href='./galerie.php?test'>Test</a>
+					</div>
+				</div>
+			</div>
+			
+		<div clas='include'>
 	
    <?php 
-// page galerie (test)
-
-// Connection à MySQL
-//mysql_connect("localhost", "root", "");
-
-// Selection de la BDD
-//mysql_select_db("kaliente");
-
 //fichier de creation de la gallerie
 
 $rep = 'thumb/'; 
 $dir = opendir($rep);
+$i = 0; // increment boucle (4 colones par lignes)
 
 echo "<div class='center'>";
 echo '<table class="container">';
 echo '<tr>';
-echo '<td>';
 
 while ($f = readdir($dir)) {
-   if(is_file($rep.$f) AND $f != 'Thumbs.db') {
+   if(is_file($rep.$f) AND $f != 'Thumbs.db' AND $i < 5) {
 		echo "<td>";
 		echo '<table class="dia"><tr><td>';
 		echo "<a href='original/".$f."' title='".$f."' rel='lightbox[1]' />";
@@ -70,6 +71,21 @@ while ($f = readdir($dir)) {
 		echo "</td></tr></table>";
 		echo "<div class='smalldesc'>".$f."</div>";
 		echo "</td>";
+		//echo $i." ";
+		$i++;
+   }
+   elseif(is_file($rep.$f) AND $f != 'Thumbs.db' AND $i = 5) {
+		$i = 0;
+		//echo $i." ";
+		echo "</tr><tr>";
+		echo "<td>";
+		echo '<table class="dia"><tr><td>';
+		echo "<a href='original/".$f."' title='".$f."' rel='lightbox[1]' />";
+		echo "<img src='thumb/".$f."' rel='thumb' alt='".$f."' ></a>";
+		echo "</td></tr></table>";
+		echo "<div class='smalldesc'>".$f."</div>";
+		echo "</td>";
+		$i++;
    }
 } 
 
