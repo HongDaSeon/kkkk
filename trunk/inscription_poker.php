@@ -38,7 +38,7 @@
 
 
 <?php
-
+require_once './config.inc.php';
 mysql_connect($CFG['server'],$CFG['login'], $CFG['pass']);
 
 mysql_select_db($CFG['db']);
