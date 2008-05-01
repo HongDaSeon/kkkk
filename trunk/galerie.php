@@ -42,9 +42,13 @@
 		<div id='content'>   
 			<div id='sidebar'>
 				<div class='boxed'>
-					<h2 class='title'>Menu</h2>
+					<h2 class='title'>Menu Galerie</h2>
 					<div class='content'>
-						<a href='./galerie.php?test'>Test</a>
+						<a href='./galerie.php?name=test'>Amsterdam</a><br><br>
+						<a href='./galerie.php?name=test2'>London</a><br><br>
+						<a href='./galerie.php?name=test3'>Back To School</a><br><br>
+						<a href='./galerie.php?name=test'>Test</a><br><br>
+						<a href='./galerie.php?name=test'>Test</a><br><br>
 					</div>
 				</div>
 			</div>
@@ -53,8 +57,35 @@
 	
    <?php 
 //fichier de creation de la gallerie
+require_once './config.inc.php';
 
-$rep = 'thumb/'; 
+mysql_connect($CFG['server'],$CFG['login'], $CFG['pass']);
+
+mysql_select_db($CFG['db']);
+
+if(isset($_GET['name'])) {
+
+	$name = $_GET['name'];
+	
+	$rep = mysql_query("
+		SELECT `id`
+		FROM `galerie`
+		WHERE `nom` = '$name'
+		");
+		
+	if(!empty($rep)) {	
+		$data = mysql_fetch_array($rep);
+		if(empty($data)) 
+			$data = 0;  // On fixe un id de base		
+	}
+	else {
+		
+	}
+	
+	
+}
+
+$rep = 'thumb/';
 $dir = opendir($rep);
 $i = 0; // increment boucle (4 colones par lignes)
 
