@@ -1,5 +1,5 @@
 <?php
-//Fichier de configuration (1and1)
+//Fichier de configuration 
 
 global $CFG;
 $CFG['server'] = 'localhost';
