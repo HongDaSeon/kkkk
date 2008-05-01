@@ -39,9 +39,9 @@
 
 <?php
 
-mysql_connect("db1094.1and1.fr", "dbo216509682", "x63ZBa7Y");
+mysql_connect($CFG['server'],$CFG['login'], $CFG['pass']);
 
-mysql_select_db("db216509682");
+mysql_select_db($CFG['db']);
 
  
 if (

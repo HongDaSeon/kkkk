@@ -45,10 +45,10 @@
 					<h2 class='title'>Menu Galerie</h2>
 					<div class='content'>
 						<a href='./galerie.php?name=paris'>Kaliente à Paris</a><br><br>
-						<a href='./galerie.php?name=test2'>London</a><br><br>
+						<!--<a href='./galerie.php?name=test2'>London</a><br><br>
 						<a href='./galerie.php?name=test3'>Back To School</a><br><br>
 						<a href='./galerie.php?name=test'>Test</a><br><br>
-						<a href='./galerie.php?name=test'>Test</a><br><br>
+						<a href='./galerie.php?name=test'>Test</a><br><br>-->
 					</div>
 				</div>
 			</div>
@@ -85,7 +85,7 @@ if(isset($_GET['name'])) {
 	
 }
 if(!isset($data['path']))
-	$data['path'] = 'test/'; // Page par defaut
+	$data['path'] = 'kaliente_paris/'; // Page par defaut
 
 $rep = 'thumb/'.$data['path'];
 $dir = opendir($rep);
