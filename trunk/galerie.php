@@ -68,15 +68,15 @@ if(isset($_GET['name'])) {
 	$name = $_GET['name'];
 	
 	$rep = mysql_query("
-		SELECT `id`
+		SELECT `id`,`path`
 		FROM `galerie`
 		WHERE `nom` = '$name'
 		");
 		
 	if(!empty($rep)) {	
 		$data = mysql_fetch_array($rep);
-		if(empty($data)) 
-			$data = 0;  // On fixe un id de base		
+		if(empty($data['id'])) 
+			$data['id'] = 0;  // On fixe un id de base		
 	}
 	else {
 		
@@ -84,8 +84,10 @@ if(isset($_GET['name'])) {
 	
 	
 }
+if(!isset($data['path']))
+	$data['path'] = 'test/';
 
-$rep = 'thumb/';
+$rep = 'thumb/'.$data['path'];
 $dir = opendir($rep);
 $i = 0; // increment boucle (4 colones par lignes)
 
@@ -97,8 +99,8 @@ while ($f = readdir($dir)) {
    if(is_file($rep.$f) AND $f != 'Thumbs.db' AND $i < 5) {
 		echo "<td>";
 		echo '<table class="dia"><tr><td>';
-		echo "<a href='original/".$f."' title='".$f."' rel='lightbox[1]' />";
-		echo "<img src='thumb/".$f."' rel='thumb' alt='".$f."' ></a>";
+		echo "<a href='original/".$data['path'].$f."' title='".$f."' rel='lightbox[1]' />";
+		echo "<img src='thumb/".$data['path'].$f."' rel='thumb' alt='".$f."' ></a>";
 		echo "</td></tr></table>";
 		echo "<div class='smalldesc'>".$f."</div>";
 		echo "</td>";
@@ -109,8 +111,8 @@ while ($f = readdir($dir)) {
 		echo "</tr><tr>";
 		echo "<td>";
 		echo '<table class="dia"><tr><td>';
-		echo "<a href='original/".$f."' title='".$f."' rel='lightbox[1]' />";
-		echo "<img src='thumb/".$f."' rel='thumb' alt='".$f."' ></a>";
+		echo "<a href='original/".$data['path'].$f."' title='".$f."' rel='lightbox[1]' />";
+		echo "<img src='thumb/".$data['path'].$f."' rel='thumb' alt='".$f."' ></a>";
 		echo "</td></tr></table>";
 		echo "<div class='smalldesc'>".$f."</div>";
 		echo "</td>";
