@@ -76,7 +76,13 @@ mysql_select_db($CFG['db']);
 		<div class='include'>
 	
    <?php 
+$name = 'paris';
+$page = 1; // Page par défaut : 1
 
+if(isset($_GET['page'])) 
+	$page = $_GET['page'];
+
+	
 if(isset($_GET['name'])) {
 
 	$name = $_GET['name'];
@@ -87,15 +93,12 @@ if(isset($_GET['name'])) {
 		WHERE `nom` = '$name'
 		");
 		
-	if(!empty($rep)) {	
-		$data = mysql_fetch_array($rep);
-		// if(empty($data['id'])) 
-			// $data['id'] = 1;  // On fixe un id de base		
-	}
-	else {
-		
-	}
+	if(!empty($rep)) 
+		$data = mysql_fetch_array($rep);	
+
 }
+
+
 if(!isset($data['path']))
 	$data['path'] = 'kaliente_paris/'; // Page par defaut
 
@@ -103,37 +106,91 @@ $rep = 'thumb/'.$data['path'];
 $dir = opendir($rep);
 $i = 0; // increment boucle (4 colones par lignes)
 
+
+//Compter les fichiers du dossier (seulement les images)
+$files = glob($rep."/*.db");
+$compteurthumbs = count($files);
+$files = glob($rep."/*.*");
+$compteurf = count ($files) - $compteurthumbs;
+
+
+//Increment pour compter les fichier pendant l'écriture de la page html
+$c = 0;
+
+/*
+* Précision:
+*	on veut mettre seulement 25 photos par page pour une meilleure lisibilité
+*/
+$modulo = $compteurf % 25;
+$nbpages = ($compteurf - $modulo) / 25 + 1;
+
+
 echo "<div class='center'>";
 echo '<table class="container">';
 echo '<tr>';
 
-while ($f = readdir($dir)) {
-   if(is_file($rep.$f) AND $f != 'Thumbs.db' AND $i < 5) {
-		echo "<td>";
-		echo '<table class="dia"><tr><td>';
-		echo "<a href='original/".$data['path'].$f."' title='".$f."' rel='lightbox[1]' />";
-		echo "<img src='thumb/".$data['path'].$f."' rel='thumb' alt='".$f."' ></a>";
-		echo "</td></tr></table>";
-		echo "<div class='smalldesc'>".$f."</div>";
-		echo "</td>";
-		$i++;
-   }
-   elseif(is_file($rep.$f) AND $f != 'Thumbs.db' AND $i = 5) {
-		$i = 0;
-		echo "</tr><tr>";
-		echo "<td>";
-		echo '<table class="dia"><tr><td>';
-		echo "<a href='original/".$data['path'].$f."' title='".$f."' rel='lightbox[1]' />";
-		echo "<img src='thumb/".$data['path'].$f."' rel='thumb' alt='".$f."' ></a>";
-		echo "</td></tr></table>";
-		echo "<div class='smalldesc'>".$f."</div>";
-		echo "</td>";
-		$i++;
-   }
+$foto_min = ($page -1) * 25 + 1;
+$foto_max = $page * 25;
+ //echo $foto_min."<BR>";
+ //echo $foto_max."<BR><br>";
+
+//echo "au début: i= ".$i."<br>";
+//echo "au début: c= ".$c."<br><br>";
+while (FALSE !== ($f = readdir($dir))) {
+	
+	if(is_file($rep.$f) && $f != 'Thumbs.db')
+		$c++;
+	
+	//echo $c." eme fichier: i = ".$i."<br>";
+	
+	if(is_file($rep.$f) && $f != 'Thumbs.db' && $i < 5) { // && $c >= $foto_min && $c <= $foto_max
+		if($c > $foto_min) {
+			if($c <= $foto_max) {
+				echo "<td>";
+				echo '<table class="dia"><tr><td>';
+				echo "<a href='o riginal/".$data['path'].$f."' title='".$f."' rel='lightbox[1]' />";
+				echo "<img src='thumb/".$data['path'].$f."' rel='thumb' alt='".$f."' ></a>";
+				echo "</td></tr></table>";
+				echo "<div class='smalldesc'>".$f."</div>";
+				echo "</td>";
+				//echo "ok";
+				//echo "i: ".$i."<br>";
+				$i++;
+				//echo "i: ".$i."<br>";
+			}
+		}
+	}
+	
+	elseif(is_file($rep.$f) && $f != 'Thumbs.db') {
+		if($c > $foto_min) {
+			if($c <= $foto_max) {
+				$i = 0;
+				echo "</tr><tr>";
+				echo "<td>";
+				echo '<table class="dia"><tr><td>';
+				echo "<a href='original/".$data['path'].$f."' title='".$f."' rel='lightbox[1]' />";
+				echo "<img src='thumb/".$data['path'].$f."' rel='thumb' alt='".$f."' ></a>";
+				echo "</td></tr></table>";
+				echo "<div class='smalldesc'>".$f."</div>";
+				echo "</td>";
+				$i++;
+			}
+		
+		}
+    }
 } 
 echo '</tr>';
 echo '</table>';
 echo '</div>';
+
+// affichage des liens vers les différentes pages
+$k = 1;
+echo"<table><tr>";
+while ($k <= $nbpages) {
+	echo "<td><a href='./galerie.php?name=".$name."&page=".$k."'>$k</a></td>";
+	$k++;
+	}
+echo "</tr></table>";
 ?>
 
 			</div>
