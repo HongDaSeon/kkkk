@@ -1,7 +1,10 @@
 <h2><a href="rediger_news.php">Ajouter une news</a></h2>
 <?php
-mysql_connect("localhost", "root", "");
-mysql_select_db("kaliente");
+require_once './config.inc.php';
+
+mysql_connect($CFG['server'],$CFG['login'], $CFG['pass']);
+
+mysql_select_db($CFG['db']);
 
 if (isset($_POST['titre']) AND isset($_POST['contenu']))
 {

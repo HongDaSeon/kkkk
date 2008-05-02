@@ -1,10 +1,11 @@
 <h3><a href="liste_news.php">Retour à la liste des news</a></h3>
 
 <?php
+require_once './config.inc.php';
 
-mysql_connect("localhost", "root", "");
+mysql_connect($CFG['server'],$CFG['login'], $CFG['pass']);
 
-mysql_select_db("kaliente");
+mysql_select_db($CFG['db']);
 
 if (isset($_GET['modifier_news']))
 {
