@@ -1,3 +1,12 @@
+<?php
+//fichier de creation de la gallerie
+require_once './config.inc.php';
+
+mysql_connect($CFG['server'],$CFG['login'], $CFG['pass']);
+
+mysql_select_db($CFG['db']);
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
     <head>
@@ -44,9 +53,27 @@
 				<div class='boxed'>
 					<h2 class='title'>Menu Galerie</h2>
 					<div class='content'>
-						<a href='./galerie.php?name=paris'>Kaliente à Paris</a><br><br>
-						<!--<a href='./galerie.php?name=test2'>London</a><br><br>
-						<a href='./galerie.php?name=test3'>Back To School</a><br><br>
+					
+					<?php
+						$rep = mysql_query("
+						SELECT * 
+						FROM `galerie`
+						");
+						
+						if(isset($rep)) {
+							while($data = mysql_fetch_array($rep)) {
+								echo "<a href='./galerie.php?name=".$data['nom']."'>".$data['intitule']."</a>";
+								echo "<br />";
+								echo "<br />";
+							}
+						}
+						
+					?>
+						<!--<a href='./galerie.php?name=paris'>Kaliente à Paris</a><br><br>
+						<a href='./galerie.php?name=back'>Back To School</a><br><br>
+						<a href='./galerie.php?name=christmas'>La Christmas</a><br><br>
+						<a href='./galerie.php?name=test2'>London</a><br><br>
+						
 						<a href='./galerie.php?name=test'>Test</a><br><br>
 						<a href='./galerie.php?name=test'>Test</a><br><br>-->
 					</div>
@@ -56,12 +83,6 @@
 		<div class='include'>
 	
    <?php 
-//fichier de creation de la gallerie
-require_once './config.inc.php';
-
-mysql_connect($CFG['server'],$CFG['login'], $CFG['pass']);
-
-mysql_select_db($CFG['db']);
 
 if(isset($_GET['name'])) {
 
@@ -81,8 +102,6 @@ if(isset($_GET['name'])) {
 	else {
 		
 	}
-	
-	
 }
 if(!isset($data['path']))
 	$data['path'] = 'kaliente_paris/'; // Page par defaut
