@@ -76,8 +76,10 @@ mysql_select_db($CFG['db']);
 		<div class='include'>
 	
    <?php 
+// Param. par défaut
 $name = 'paris';
 $page = 1; // Page par défaut : 1
+$data['intitule'] = 'Kaliente à Paris';
 
 if(isset($_GET['page'])) 
 	$page = $_GET['page'];
@@ -88,7 +90,7 @@ if(isset($_GET['name'])) {
 	$name = $_GET['name'];
 	
 	$rep = mysql_query("
-		SELECT `id`,`path`
+		SELECT `id`,`path`,`intitule`
 		FROM `galerie`
 		WHERE `nom` = '$name'
 		");
@@ -125,17 +127,23 @@ $modulo = $compteurf % 25;
 $nbpages = ($compteurf - $modulo) / 25 + 1;
 
 
+// Affichage du titre de la galerie
+echo "<div class='boxed'>";
+echo "<h2 class='title'>".$data['intitule']." - Page: ".$page."</h2>";
+echo "<div class='content'>";
+					
+					
 echo "<div class='center'>";
 echo '<table class="container">';
 echo '<tr>';
 
 $foto_min = ($page -1) * 25 + 1;
 $foto_max = $page * 25;
- echo $foto_min."<BR>";
- echo $foto_max."<BR><br>";
+ // echo $foto_min."<BR>";
+ // echo $foto_max."<BR><br>";
 
-echo "au début: i= ".$i."<br>";
-echo "au début: c= ".$c."<br><br>";
+// echo "au début: i= ".$i."<br>";
+// echo "au début: c= ".$c."<br><br>";
 while (FALSE !== ($f = readdir($dir))) {
 	
 	if(is_file($rep.$f) && $f != 'Thumbs.db')
@@ -144,7 +152,7 @@ while (FALSE !== ($f = readdir($dir))) {
 	//echo $c." eme fichier: i = ".$i."<br>";
 	
 	if(is_file($rep.$f) && $f != 'Thumbs.db' && $i < 5) { // && $c >= $foto_min && $c <= $foto_max
-		if($c > $foto_min) {
+		if($c >= $foto_min) {
 			if($c <= $foto_max) {
 				echo "<td>";
 				echo '<table class="dia"><tr><td>';
@@ -156,8 +164,8 @@ while (FALSE !== ($f = readdir($dir))) {
 				//echo "ok";
 				// echo "i: ".$i."<br>";
 				$i++;
-				echo "i: ".$i."<br>";
-				echo "c: ".$c."<br><br>";
+				// echo "i: ".$i."<br>";
+				// echo "c: ".$c."<br><br>";
 			}
 		}
 	}
@@ -175,8 +183,8 @@ while (FALSE !== ($f = readdir($dir))) {
 				echo "<div class='smalldesc'>".$f."</div>";
 				echo "</td>";
 				$i++;
-				echo "i: ".$i."<br>";
-				echo "c: ".$c."<br><br>";
+				// echo "i: ".$i."<br>";
+				// echo "c: ".$c."<br><br>";
 			}
 		
 		}
@@ -184,7 +192,7 @@ while (FALSE !== ($f = readdir($dir))) {
 } 
 echo '</tr>';
 echo '</table>';
-echo '</div>';
+echo '</div></div></div>';
 
 // affichage des liens vers les différentes pages
 $k = 1;
