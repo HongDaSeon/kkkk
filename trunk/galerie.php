@@ -69,13 +69,6 @@ mysql_select_db($CFG['db']);
 						}
 						
 					?>
-						<!--<a href='./galerie.php?name=paris'>Kaliente à Paris</a><br><br>
-						<a href='./galerie.php?name=back'>Back To School</a><br><br>
-						<a href='./galerie.php?name=christmas'>La Christmas</a><br><br>
-						<a href='./galerie.php?name=test2'>London</a><br><br>
-						
-						<a href='./galerie.php?name=test'>Test</a><br><br>
-						<a href='./galerie.php?name=test'>Test</a><br><br>-->
 					</div>
 				</div>
 			</div>
