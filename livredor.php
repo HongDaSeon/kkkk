@@ -43,9 +43,11 @@ mysql_connect($CFG['server'],$CFG['login'], $CFG['pass']);
 
 mysql_select_db($CFG['db']);
 
-trim($_POST['pseudo']);
-trim($_POST['promo']);
-trim($_POST['message']);
+if(isset($_POST['pseudo']) && isset($_POST['promo']) && isset ($_POST['message']) ) {
+	trim($_POST['pseudo']);
+	trim($_POST['promo']);
+	trim($_POST['message']);
+	}
 
 if (!empty($_POST['pseudo']) AND !empty($_POST['promo']) AND !empty($_POST['message'])
  AND isset($_POST['pseudo']) AND isset($_POST['promo']) AND isset($_POST['message']))
