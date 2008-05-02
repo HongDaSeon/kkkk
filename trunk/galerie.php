@@ -196,12 +196,19 @@ echo '</div></div></div>';
 
 // affichage des liens vers les différentes pages
 $k = 1;
-echo"<table><tr>";
+echo '<table><tr>';
+
+if ($nbpages == 1)
+	echo '<td>Page: </td>';
+else
+	echo '<td>Pages: </td>';
+	
 while ($k <= $nbpages) {
 	echo "<td><a href='./galerie.php?name=".$name."&page=".$k."'>$k</a></td>";
 	$k++;
 	}
-echo "</tr></table>";
+	
+echo '</tr></table>';
 ?>
 
 			</div>
