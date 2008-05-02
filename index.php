@@ -94,7 +94,8 @@
 					'livre' => 'livredor.php',
 					'projet' => 'projet.html',
 					'poker' => 'inscription_poker.php',
-					'test' => 'test.html'
+					'test' => 'test.html',
+					'pres' => 'presentation.html'
 					);
     $a = key($_GET);
       if(isset($lien[$a]))
