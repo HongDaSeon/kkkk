@@ -131,11 +131,11 @@ echo '<tr>';
 
 $foto_min = ($page -1) * 25 + 1;
 $foto_max = $page * 25;
- //echo $foto_min."<BR>";
- //echo $foto_max."<BR><br>";
+ echo $foto_min."<BR>";
+ echo $foto_max."<BR><br>";
 
-//echo "au début: i= ".$i."<br>";
-//echo "au début: c= ".$c."<br><br>";
+echo "au début: i= ".$i."<br>";
+echo "au début: c= ".$c."<br><br>";
 while (FALSE !== ($f = readdir($dir))) {
 	
 	if(is_file($rep.$f) && $f != 'Thumbs.db')
@@ -154,9 +154,10 @@ while (FALSE !== ($f = readdir($dir))) {
 				echo "<div class='smalldesc'>".$f."</div>";
 				echo "</td>";
 				//echo "ok";
-				//echo "i: ".$i."<br>";
+				// echo "i: ".$i."<br>";
 				$i++;
-				//echo "i: ".$i."<br>";
+				echo "i: ".$i."<br>";
+				echo "c: ".$c."<br><br>";
 			}
 		}
 	}
@@ -174,6 +175,8 @@ while (FALSE !== ($f = readdir($dir))) {
 				echo "<div class='smalldesc'>".$f."</div>";
 				echo "</td>";
 				$i++;
+				echo "i: ".$i."<br>";
+				echo "c: ".$c."<br><br>";
 			}
 		
 		}
