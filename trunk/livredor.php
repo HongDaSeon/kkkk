@@ -35,7 +35,7 @@
 
     <p class="pages">
 
- '
+
 
 <?php
 require_once './config.inc.php';
@@ -47,7 +47,8 @@ trim($_POST['pseudo']);
 trim($_POST['promo']);
 trim($_POST['message']);
 
-if (!empty($_POST['pseudo']) AND !empty($_POST['promo']) AND !empty($_POST['message']))
+if (!empty($_POST['pseudo']) AND !empty($_POST['promo']) AND !empty($_POST['message'])
+ AND isset($_POST['pseudo']) AND isset($_POST['promo']) AND isset($_POST['message']))
 
 {
 
@@ -55,7 +56,6 @@ if (!empty($_POST['pseudo']) AND !empty($_POST['promo']) AND !empty($_POST['mess
     $promo = mysql_real_escape_string(htmlspecialchars($_POST['promo'])); 
     $message = mysql_real_escape_string(htmlspecialchars($_POST['message'])); 
     $message = nl2br($message);
-
 
     mysql_query("INSERT INTO livreor VALUES('', '$pseudo', '$promo', '$message')");
 
