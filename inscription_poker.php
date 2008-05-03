@@ -1,13 +1,13 @@
   		<div class='boxed'>
-			<h2 class='title'>Inscription pour le tournois de poker</h2>
+			<h2 class='title'>Inscription pour le tournoi de poker</h2>
 			<div class='content'>
 
 <form method="post" action="index.php?poker">
       <fieldset>
-       <legend>Inscription pour le tournois de poker</legend>
+       <legend>Inscription pour le tournoi de poker</legend>
 <p>
 
-    Un jolie text blabla qui explique le tournois <br /> <br />
+    Kaliente te propose, le Mardi 13 Mai, de venir participer à un tournoi de poker. De nombreux lots à gagner, voyages, baptème, malettes, abonnement au magasine Live Poker,... <br /> <br />
   <label for="pseudo">Pseudo : </label> <input type="text" name="pseudo" id='pseudo' /> <br />
   <label for="nom">Nom : </label> <input type="text" name="nom" id='nom' /><br />
   <label for="prenom">Prénom : </label> <input type="text" name="prenom" id='prenom' /><br />
