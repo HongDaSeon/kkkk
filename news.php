@@ -36,7 +36,7 @@ while ($donnees = mysql_fetch_array($retour))
 }
 ?>
 		<div class='boxed'>
-			<h2 class='title'>Sans eux on aurait pas pu vous offrir ces journées...</h2>
+			<h2 class='title'>Sans eux nous n'aurions pas pu vous offrir ces journées...</h2>
 			<div class='content'>
 <!-- PREMIERE LIGNE, les larges-->
 <a href='http://www.paintball-connexion.com/'>
@@ -52,7 +52,7 @@ while ($donnees = mysql_fetch_array($retour))
     <img src='img/partenaires/decat.gif' alt='Decathlon'/>
      </a>
 <a href='http://www.defense.gouv.fr/air'>
-    <img src='img/partenaires/armeair.jpg' alt="des gros mauvais..."/>
+    <img src='img/partenaires/armeair.jpg' alt="Armé de l'air"/>
      </a>
 
      
@@ -87,7 +87,7 @@ while ($donnees = mysql_fetch_array($retour))
     <img src='img/partenaires/moving.gif' alt='Moving'/>
      </a>
 <a href='http://www.defense.gouv.fr/marine'>
-    <img src='img/partenaires/marine.gif' alt='des gros mauvais...'/>
+    <img src='img/partenaires/marine.gif' alt='La marine'/>
      </a>
 <a href='http://www.bowlingcergy.fr/'>
     <img src='img/partenaires/bowling.gif' alt='Bowling Cergy'/>
@@ -96,7 +96,7 @@ while ($donnees = mysql_fetch_array($retour))
     <img src='img/partenaires/kipling.jpg' alt='Kipling'/>
      </a>
 <a href='http://www.defense.gouv.fr/terre'>
-    <img src='img/partenaires/arme.jpg' alt='des gros mauvais...'/>
+    <img src='img/partenaires/arme.jpg' alt='Armé de terre'/>
      </a>
 </div>
 </div>

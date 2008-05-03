@@ -36,7 +36,7 @@
       <li><a href="index.php?partenaires">Nos Partenaires</a></li>
       <li><a href="index.php?projet">Notre projet</a></li>
       <li><a href="index.php?livre">Livre d'or</a></li>
-	  <li><a href="./galerie.php">Galerie (test)</a></li>
+	  <li><a href="./galerie.php">Galerie</a></li>
       </ul>   
     </div> 
    </div>   
