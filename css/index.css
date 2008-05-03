@@ -199,9 +199,14 @@ text-decoration:none;
 .include
 {
 	float: left;
-	width: 670px;
+	width:670px;
 }
 
+.news
+{
+width:670px;
+
+}
 
 #sidebar {
 	float: right;
@@ -289,12 +294,6 @@ fieldset
 
 
 /* pour le test : */
-
-.include #test
-{
-	float: left;
-	width: 10px;
-}
 
 
 #test	#mainContainer{

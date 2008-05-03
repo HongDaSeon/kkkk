@@ -9,9 +9,10 @@ $retour = mysql_query('SELECT * FROM news ORDER BY id DESC LIMIT 0, 5');
 while ($donnees = mysql_fetch_array($retour))
 {
 ?>
+ <div class="news">
+
   		<div class='boxed'>
 
-<div class="news">
     			<h2 class='title'><?php echo $donnees['titre']; ?></h2>
 			<div class='content'>
 
@@ -30,7 +31,7 @@ while ($donnees = mysql_fetch_array($retour))
 
 </div>
 </div>
-</div>
+
 <?php
 }
 ?>
@@ -95,4 +96,6 @@ while ($donnees = mysql_fetch_array($retour))
      </a>
 
 </div>
+</div>
+
 </div>
