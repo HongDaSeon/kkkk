@@ -33,6 +33,19 @@ width:300px;
 float: left;
 }
 
+#commandement
+{
+  margin-left:200px;
+  font-size:120%;
+}
+
+.lettre
+{
+font-size:170%;
+color:#ff8307;
+
+}
+
 .alinea{
 margin-left:30px;
 margin-top:3px;
