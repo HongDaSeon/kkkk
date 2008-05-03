@@ -34,3 +34,65 @@ while ($donnees = mysql_fetch_array($retour))
 <?php
 }
 ?>
+		<div class='boxed'>
+			<h2 class='title'>Sans eux on aurait pas pu vous offrir ces journées...</h2>
+			<div class='content'>
+<!-- PREMIERE LIGNE, les larges-->
+<a href='http://www.paintball-connexion.com/'>
+    <img src='img/partenaires/paintball.jpg' alt='Paintballconnexion'/>
+     </a>
+<a href='http://www.goldenvoyages.com/'>
+    <img src='img/partenaires/goldenvoyage.jpg' alt='GoldenVoyage'/>
+     </a>
+<a href='http://www.jules.fr/'>
+    <img src='img/partenaires/jules.jpg' alt='Jules'/>
+     </a>
+<a href='http://www.decathlon.fr/'>
+    <img src='img/partenaires/decat.gif' alt='Decathlon'/>
+     </a>
+<a href='http://www.defense.gouv.fr/air'>
+    <img src='img/partenaires/armeair.jpg' alt="des gros mauvais..."/>
+     </a>
+
+     
+<br />
+<!-- DEUXIEME LIGNE, les haut-->
+<a href='http://www.danone.com/'>
+    <img src='img/partenaires/danone.jpg' alt='Danone'/>
+     </a>
+<a href='http://www.ville-cergy.fr/'>
+    <img src='img/partenaires/cergy_pontoise.gif' alt='Ville de cergy'/>
+     </a>
+<a href='http://www.laserquest-cergy.com/'>
+    <img src='img/partenaires/laserquest.jpg' alt='Laser Quest'/>
+     </a>
+<a href='http://www.burnenergydrink.fr/'>
+    <img src='img/partenaires/burn.jpg' alt='Burn'/>
+     </a>
+<a href='http://www.manix.net/'>
+    <img src='img/partenaires/manix.jpg' alt='Manix'/>
+     </a>
+<a href='http://www.livepoker-mag.com/'>
+    <img src='img/partenaires/livepoker.jpg' alt='Poker Live'/>
+     </a>
+<br />
+<!-- TRoisieme LIGNE, les autres-->
+
+<a href='http://www.movingcergy.com/'>
+    <img src='img/partenaires/moving.gif' alt='Moving'/>
+     </a>
+<a href='http://www.defense.gouv.fr/marine'>
+    <img src='img/partenaires/marine.gif' alt='des gros mauvais...'/>
+     </a>
+<a href='http://www.bowlingcergy.fr/'>
+    <img src='img/partenaires/bowling.gif' alt='Bowling Cergy'/>
+     </a>
+<a href='http://www.kipling.com/'>
+    <img src='img/partenaires/kipling.jpg' alt='Kipling'/>
+     </a>
+<a href='http://www.defense.gouv.fr/terre'>
+    <img src='img/partenaires/arme.jpg' alt='des gros mauvais...'/>
+     </a>
+
+</div>
+</div>
