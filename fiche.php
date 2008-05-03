@@ -33,35 +33,35 @@ if(isset($_GET['id'])) {
 
 <ul>
 <li>Nom: </li>
-<?php echo $data['nom'];?>
+<div class='alinea'><?php echo $data['nom'];?></div>
 <br />
 <br />
 <li>Prénom: </li>
-<?php echo $data['prenom'];?>
+<div class='alinea'><?php echo $data['prenom'];?></div>
 <br />
 <br />
 <li>Date de naissance:</li>
-<?php echo $data['date'];?>
+<div class='alinea'><?php echo $data['date'];?></div>
 <br />
 <br />
 <li>Lieu où il habite:</li>
-<?php echo $data['lieu'];?>
+<div class='alinea'><?php echo $data['lieu'];?></div>
 <br />
 <br />
 <li>Assoc de l'école dont il fait parti:</li>
-<?php echo $data['assoc'];?>
+<div class='alinea'><?php echo $data['assoc'];?></div>
 <br />
 <br />
 <li>Passions:</li>
-<?php echo $data['passion'];?>
+<div class='alinea'><?php echo $data['passion'];?></div>
 <br />
 <br />
 <li>Ptite présentation:</li>
-<?php echo $data['presentation'];?>
+<div class='alinea'><?php echo $data['presentation'];?></div>
 <br />
 <br />
 <li>Devise:</li>
-<?php echo $data['devise'];?>
+<div class='alinea'><?php echo $data['devise'];?></div>
 <br />
 <br />
 
