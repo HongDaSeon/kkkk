@@ -76,6 +76,10 @@ while ($donnees = mysql_fetch_array($retour))
 <a href='http://www.livepoker-mag.com/'>
     <img src='img/partenaires/livepoker.jpg' alt='Poker Live'/>
      </a>
+<a href='http://cbc95.dragons.free.fr/'>
+    <img src='img/partenaires/cbc.jpg' alt='Courdimanche Billard Club'/>
+     </a>
+
 <br />
 <!-- TRoisieme LIGNE, les autres-->
 
@@ -94,7 +98,6 @@ while ($donnees = mysql_fetch_array($retour))
 <a href='http://www.defense.gouv.fr/terre'>
     <img src='img/partenaires/arme.jpg' alt='des gros mauvais...'/>
      </a>
-
 </div>
 </div>
 
