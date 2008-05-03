@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 2.6.4-pl3
+-- version 2.6.1
 -- http://www.phpmyadmin.net
 -- 
--- Serveur: db1442.1and1.fr
--- Généré le : Vendredi 02 Mai 2008 à 23:07
--- Version du serveur: 5.0.51
--- Version de PHP: 4.3.10-200.schlund.1
+-- Serveur: localhost
+-- Généré le : Samedi 03 Mai 2008 à 12:21
+-- Version du serveur: 4.1.9
+-- Version de PHP: 4.3.10
 -- 
--- Base de données: `db242209403`
+-- Base de données: `kaliente`
 -- 
 
 -- --------------------------------------------------------
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `galerie` (
   `path` varchar(255) NOT NULL default '',
   `intitule` varchar(100) NOT NULL default '',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 -- 
 -- Contenu de la table `galerie`
@@ -47,11 +47,11 @@ INSERT INTO `galerie` VALUES (11, 'londre', 'london/', 'Voyage à Londres');
 DROP TABLE IF EXISTS `livreor`;
 CREATE TABLE IF NOT EXISTS `livreor` (
   `id` int(11) NOT NULL auto_increment,
-  `pseudo` varchar(255) NOT NULL,
-  `promo` varchar(50) NOT NULL,
+  `pseudo` varchar(255) NOT NULL default '',
+  `promo` varchar(50) NOT NULL default '',
   `message` text NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
 
 -- 
 -- Contenu de la table `livreor`
@@ -109,6 +109,8 @@ INSERT INTO `livreor` VALUES (53, 'tyf', '2k10', 'ytfty');
 INSERT INTO `livreor` VALUES (54, 'ftyfytfytfty', '2k10', 'ftyftyftyftyfhtyfty');
 INSERT INTO `livreor` VALUES (55, 'ftyfytfytfty', '2k10', 'ftyftyftyftyfhtyfty');
 INSERT INTO `livreor` VALUES (56, 'ukhk', '2k10', 'bon fuck ca m\\''saoule osef du bug oO\r\ncelui qui fais F5 c\\''est un looooooooooooser s\\''tt');
+INSERT INTO `livreor` VALUES (57, 'ifer', '2k10', 'test');
+INSERT INTO `livreor` VALUES (58, 'ifer', '2k10', 'test\r\n');
 
 -- --------------------------------------------------------
 
@@ -119,12 +121,12 @@ INSERT INTO `livreor` VALUES (56, 'ukhk', '2k10', 'bon fuck ca m\\''saoule osef 
 DROP TABLE IF EXISTS `news`;
 CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL auto_increment,
-  `titre` varchar(255) NOT NULL,
+  `titre` varchar(255) NOT NULL default '',
   `contenu` text NOT NULL,
   `timestamp` bigint(20) NOT NULL default '0',
-  `pseudo` varchar(255) NOT NULL,
+  `pseudo` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 -- 
 -- Contenu de la table `news`
@@ -148,10 +150,68 @@ CREATE TABLE IF NOT EXISTS `poker` (
   `promo` varchar(50) NOT NULL default '',
   `mail` text NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 -- 
 -- Contenu de la table `poker`
 -- 
 
 INSERT INTO `poker` VALUES (1, 'tutu', 'Bernabe', 'tutu', '2k10', '');
+
+-- --------------------------------------------------------
+
+-- 
+-- Structure de la table `team`
+-- 
+
+DROP TABLE IF EXISTS `team`;
+CREATE TABLE IF NOT EXISTS `team` (
+  `id` int(11) NOT NULL default '0',
+  `nom` varchar(15) NOT NULL default '',
+  `prenom` varchar(15) NOT NULL default '',
+  `pseudo` varchar(15) NOT NULL default '',
+  `date` varchar(10) NOT NULL default '',
+  `lieu` varchar(100) NOT NULL default '',
+  `assoc` text NOT NULL,
+  `passion` text NOT NULL,
+  `presentation` text NOT NULL,
+  `devise` text NOT NULL,
+  `path` varchar(50) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- 
+-- Contenu de la table `team`
+-- 
+
+INSERT INTO `team` VALUES (1, '', '', 'Kekette', '', '', '', '', '', '', 'boquet_kevin.jpg');
+INSERT INTO `team` VALUES (2, '', '', 'Fanouk', '', '', '', '', '', '', 'abramatic_fanny.jpg');
+INSERT INTO `team` VALUES (3, '', '', 'Chaton', '', '', '', '', '', '', 'trichet_yoann.JPG');
+INSERT INTO `team` VALUES (4, '', '', 'Jéjé', '', '', '', '', '', '', 'fontaine_jeremy.jpg');
+INSERT INTO `team` VALUES (5, '', '', 'Tiboo', '', '', '', '', '', '', 'muller_thibaut.jpg');
+INSERT INTO `team` VALUES (6, '', '', 'Mika', '', '', '', '', '', '', 'faure_mickael.jpg');
+INSERT INTO `team` VALUES (7, 'BERNABE', 'Thomas', 'Nanard', '11/11/1986', 'Menucourt', 'BDS : équipe de foot\r\n	', '    Kendo, Guitare, EISTI', '    Le Nanard, une espèce en voie de disparition! Classé dans la catégorie des "Grand singe", il se caractérise par une taille moyenne de 1m75 et d''un poids de 65kg. Sa durée de gestation est encore inconnue bien que certains scientifiques, les meilleurs qui plus est, se soient penchés sur la question, sans aucun résultat encore. Sa longévité  est d''une moyenne de 85ans, bien que sportif, le nanard se blesse facilement. Le noyau dur de l''espèce se situe à l''EISTI où il y prend un bon plaisir, un environnement stable et adapté à son développement.', ' Si tu donnes un poisson à un homme, il se nourrira une fois. Si tu lui apprends à pêcher, il se nourrira toute sa vie.', 'bernabe_thomas.JPG');
+INSERT INTO `team` VALUES (8, '', '', 'Lily', '', '', '', '', '', '', 'urbain_aurelie.JPG');
+INSERT INTO `team` VALUES (9, '', '', 'Moumoutte', '', '', '', '', '', '', 'victor_anais.JPG');
+INSERT INTO `team` VALUES (10, '', '', 'Bastos', '', '', '', '', '', '', '');
+INSERT INTO `team` VALUES (11, 'Le Loc', 'Martin', 'Marty', '15/02/1988', 'Chars', 'Jongl''Eisti\r\n	', 'Soirées <br />\r\nVoyages', '', 'Don''t worry, Be Happy!', 'leloc_martin.JPG');
+INSERT INTO `team` VALUES (12, '', '', 'Sheshe', '', '', '', '', '', '', 'lafosse-marin_sheryl.JPG');
+INSERT INTO `team` VALUES (13, 'Mikowsky', 'Lionel', 'Lio', '06/03/1987', 'JB la semaine, Paris le WE', 'Président Jongl''Eisti <br /> Vice-trésorier Voil''Eisti <br /> Trésorier Eistimate <br /> Pole Entreprise Liste BDE Kaliente\r\n	', 'Jonglerie, magie des cartes, Spi Dauphine 2008, dodo..', '', 'Il parait que l''avenir est dans tes rêves alors va te coucher, Coluche.', 'mikowsky_lionel.JPG');
+INSERT INTO `team` VALUES (14, '', '', 'Clo', '', '', '', '', '', '', 'philip_clotilde.JPG');
+INSERT INTO `team` VALUES (15, '', '', 'Sysy', '', '', '', '', '', '', 'martins_sylvie.JPG');
+INSERT INTO `team` VALUES (16, 'Chaperon', 'Martin', 'Martin', '13/03/1987', 'Paris', 'exemple: assoc je suis ceci <br /> je suis cela    \r\n	', '    ', '    ', '    ', 'chaperon_martin.JPG');
+INSERT INTO `team` VALUES (17, '', '', 'Jaybee', '', '', '', '', '', '', 'garcel_jb.JPG');
+INSERT INTO `team` VALUES (18, '', '', 'Ninine', '', '', '', '', '', '', 'carriere_amandine.JPG');
+INSERT INTO `team` VALUES (19, '', '', 'Little', '', '', '', '', '', '', 'petit_cedric.JPG');
+INSERT INTO `team` VALUES (20, '', '', 'Lala', '', '', '', '', '', '', 'nebia_latefa.JPG');
+INSERT INTO `team` VALUES (21, '', '', 'Benj', '', '', '', '', '', '', 'jude_benjamin.JPG');
+INSERT INTO `team` VALUES (22, '', '', 'Dino', '', '', '', '', '', '', '');
+INSERT INTO `team` VALUES (23, 'Yulzari', 'Mathieu', 'Markhor', '16/01/1985', 'Paris', 'Je suis présent à la Zoom pour faire les meilleurs photos de soirée et avoir un Year Book, <BR>   au BDS en tant que responsable du merveilleux Rugby et enfin <BR>  dans la compagnie des Fort-Scènes qui a fait une représentation cette année.', 'Mes passions sont le sport comme le Tennis, le Rugby ou encore le Ski.', 'Je suis une personne curieuse et investi dans le vie de l''école. J''adore apprendre des gens.', 'TeIbqsRDsP', 'yulzari_mathieu.JPG');
+INSERT INTO `team` VALUES (24, '', '', 'Ssof', '', '', '', '', '', '', 'belkhadra_sofiane.JPG');
+INSERT INTO `team` VALUES (25, '', '', 'Teckto', '', '', '', '', '', '', 'lombardo_romain.JPG');
+INSERT INTO `team` VALUES (26, 'test', 'test', 'Krikri', '', '', 'exemple: assoc je suis ceci <br /> je suis cela    \r\n	', '    ', '    ', '    ', 'guerlus_christophe.JPG');
+INSERT INTO `team` VALUES (27, '', '', 'Tonio', '', '', '', '', '', '', '');
+INSERT INTO `team` VALUES (28, 'Resse', 'Romain', 'Darkmoule', '19/11/1987', 'Meulan', 'BDS rugby, foot <br /> 4L trophy\r\n	', 'EISTI :)', 'Grand, beau, musclé... euh bon ok j''arrete...\r\nA l''eisti depuis maintenant 3ans, j''ai pris goût à cette école. EISTI 4 EVER !!', 'verre vide je te plains, verre plein je te vide', 'resse_romain.JPG');
+INSERT INTO `team` VALUES (29, '', '', 'Nigger', '', '', '', '', '', '', 'luit_dimitri.JPG');
+        
+        
