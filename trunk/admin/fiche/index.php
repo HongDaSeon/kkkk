@@ -46,16 +46,16 @@ Si vous avez rentré une premiere fois qqchose et que une seconde fois vous laiss
 
 	Choisir son pseudo: ( pas trop trop dur !) <br>
 	<select name="liste">     
-		<option value="1">Kekette</option>  
-		<option value="2">Fanouk</option>      
+	<!--	<option value="1">Kekette</option>  
+		<option value="2">Fanouk</option>     --> 
 		<option value="3">Chaton</option>  
-		<option value="4">Jéjé</option>   
-		<option value="5">Tiboo</option>   
-		<option value="6">Mika</option>   
+	<!--	<option value="4">Jéjé</option>   --> 
+		<option value="5">Tiboo</option>    <!--
+		<option value="6">Mika</option>  
 		<option value="7">Nanard</option>   
 		<option value="8">Lily</option>   
 		<option value="9">Moumoutte</option>   
-		<option value="10">Bastos</option>   
+	-->	<option value="10">Bastos</option>   <!--
 		<option value="11">Marty</option>   
 		<option value="12">Sheshe</option> 
 		<option value="13">Lio</option> 
@@ -73,7 +73,8 @@ Si vous avez rentré une premiere fois qqchose et que une seconde fois vous laiss
 		<option value="25">Teckto</option>
 		<option value="26">Krikri</option>		
 		<option value="27">Tonio</option>	
-		<option value="28">Darkmoule</option>
+		<option value="28">Darkmoule</option> -->
+		<option value="29">Nigger</option>
 	</select>
 	<br>
 	nom: <br>	
