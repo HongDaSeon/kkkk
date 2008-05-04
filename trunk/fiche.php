@@ -17,7 +17,32 @@ if(isset($_GET['id'])) {
 	");
 	
 	$data = mysql_fetch_array($rep);
+	
+	// $test = array(
+		// 1 => pseudo,
+		// 2 => nom,
+		// 3 => prenom, 
+		// 4 => date,
+		// 5 => lieu,
+		// 6 => assoc,
+		// 7 => passion,
+		// 8 => presentation,
+		// 9 => devise
+	// );
+	
+	// for($i = 0, $i < 9, $i++) {
+		// if($data[$test[$i]] == '')
+			// $data[$test[$i]] = '<test>';
+	// }
 
+	//echo 'devise: '.$data['devise'];
+	
+	// $i = 0;
+	// while($i < 9) {
+		// if($data[$test[$i]] == '	')
+			// $data[$test[$i]] = '<test>';	
+		// $i++;
+	// }
 }
 ?>
 <div class='boxed'>
