@@ -10,7 +10,11 @@ body {
 	color: #333333;
 }
 
-
+#goodies
+{
+text-align:center;
+font-size:110%;
+}
 a {
 	text-decoration: none;
 	color: #ff8307;
