@@ -7,7 +7,8 @@
        <legend>Inscription pour le tournoi de poker</legend>
 <p>
 
-    Kaliente te propose, le Mardi 13 Mai, de venir participer à un tournoi de poker. De nombreux lots à gagner, voyages, baptème, malettes, abonnement au magasine Live Poker,... <br /> <br />
+    Kaliente te propose, le Mardi 13 Mai, de venir participer à un tournoi de poker. De nombreux lots à gagner, voyages, baptème, malettes, abonnement au magasine Live Poker,... <br /> 
+	Les 40 premiers inscrits participeront au tournoi<br /><br />
   <label for="pseudo">Pseudo : </label> <input type="text" name="pseudo" id='pseudo' /> <br />
   <label for="nom">Nom : </label> <input type="text" name="nom" id='nom' /><br />
   <label for="prenom">Prénom : </label> <input type="text" name="prenom" id='prenom' /><br />
@@ -24,7 +25,7 @@
 <br />
   <label for="mail">eMail : </label> <input type="text" name="mail" id='mail' /><br />
 <br />
-  <label for="password">Mot de passe que l'equipe Kaliente vous a fournit sur votre webmail</label><br /> <input type="password" name="password" id='password' />
+<!--  <label for="password">Mot de passe que l'equipe Kaliente vous a fournit sur votre webmail</label><br /> <input type="password" name="password" id='password' /> -->
 
 <br />
 <br />
@@ -49,7 +50,7 @@ if (
     AND isset($_POST['nom']) 
     AND isset($_POST['prenom'])
     AND isset($_POST['promo']) 
-    AND isset($_POST['password'])
+  //  AND isset($_POST['password'])
     AND isset($_POST['mail'])
     )
 
@@ -60,10 +61,10 @@ if (
     $prenom = mysql_real_escape_string(htmlspecialchars($_POST['pseudo'])); 
     $promo = mysql_real_escape_string(htmlspecialchars($_POST['promo'])); 
     $mail = mysql_real_escape_string(htmlspecialchars($_POST['mail']));
-    $password = mysql_real_escape_string(htmlspecialchars($_POST['password'])); 
+  //  $password = mysql_real_escape_string(htmlspecialchars($_POST['password'])); 
     $pass="kthxbye";
-    if($password==$pass)
-    {
+    // if($password==$pass)
+     //{
     $reponse = mysql_query('SELECT * FROM poker');
     $compt=0;
     while ($donnees = mysql_fetch_array($reponse))
@@ -81,14 +82,14 @@ if (
         }
         else
         {
-        echo "Utilisateur déjà enregistré";
+        echo "Utilisateur déjà enregistré ";
         echo "si ce n'est pas le cas, pas de problème, vous pourrez vous inscrire avec nous lors de la journée de campagne !<br /> ou m'envoyer un mail a anarchyisborn@free.fr";
         }
 
-    }
-    else
-        echo "Veuillez entrer le bon mot de passe! <br />Si vous ne vous en souvenez plus, ou alors vous avez supprimer le mail, pas de panique! Deux choix s'offre a vous : <br />1/Vous rencontrez une personne de notre équipe et vous lui demandez le mot de passe <br />
-        2/Vous attendez la journée de campagne et on vous inscrit en direct";
+    //}
+   // else
+        // echo "Veuillez entrer le bon mot de passe! <br />Si vous ne vous en souvenez plus, ou alors vous avez supprimer le mail, pas de panique! Deux choix s'offre a vous : <br />1/Vous rencontrez une personne de notre équipe et vous lui demandez le mot de passe <br />
+        // 2/Vous attendez la journée de campagne et on vous inscrit en direct";
         
 
 }
