@@ -80,7 +80,7 @@ mysql_select_db($CFG['db']);
 <object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>
 <param name='movie' value='swf/player_flv_multi.swf' />
 <param name='allowFullScreen' value='true' />
-<param name='FlashVars' value='flv=/video/presentation.flv|/video/kaliente.flv&amp;title=Présentation des membres|Kaliente&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />
+<param name='FlashVars' value='flv=/video/presentation.flv|/video/kaliente.flv|/video/trailer.flv&amp;title=Présentation des membres|Kaliente un BDE qui...|Le 13 Mai&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />
 </object>
 Choisissez votre vidéo dans la playlist (ce bouton <img src='img/playlist.jpg' alt='playlist' />)
 
