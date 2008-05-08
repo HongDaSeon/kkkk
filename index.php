@@ -77,7 +77,7 @@ mysql_select_db($CFG['db']);
 			<div class='content'>
 			<div class='video'>	
 
-<object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>
+<object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='480' height='360'>
 <param name='movie' value='swf/player_flv_multi.swf' />
 <param name='allowFullScreen' value='true' />
 <param name='FlashVars' value='flv=/video/presentation.flv|/video/kaliente.flv|/video/trailer.flv|/video/votez.flv&amp;title=Présentation des membres|Kaliente un BDE qui...|Le 13 Mai|Votez Kaliente&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />
