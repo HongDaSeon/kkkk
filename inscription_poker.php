@@ -8,7 +8,8 @@
 <p>
 
     Kaliente te propose, le Mardi 13 Mai, de venir participer à un tournoi de poker. De nombreux lots à gagner, voyages, baptème, malettes, abonnement au magasine Live Poker,... <br /> 
-	Les 40 premiers inscrits participeront au tournoi<br /><br />
+	Les 40 premiers inscrits participeront au tournoi <br />
+	<a href='index.php?liste'>Voir la liste des inscrits au tournoi</a> <br /><br />
   <label for="pseudo">Pseudo : </label> <input type="text" name="pseudo" id='pseudo' /> <br />
   <label for="nom">Nom : </label> <input type="text" name="nom" id='nom' /><br />
   <label for="prenom">Prénom : </label> <input type="text" name="prenom" id='prenom' /><br />
@@ -80,7 +81,7 @@ if (
         mysql_query("INSERT INTO poker VALUES('', '$pseudo', '$nom', '$prenom', '$promo', '$mail')");
         echo "Inscription enregistré";
         }
-        else
+    else
         {
         echo "Utilisateur déjà enregistré ";
         echo "si ce n'est pas le cas, pas de problème, vous pourrez vous inscrire avec nous lors de la journée de campagne !<br /> ou m'envoyer un mail a anarchyisborn@free.fr";
