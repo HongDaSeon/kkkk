@@ -85,29 +85,33 @@ mysql_select_db($CFG['db']);
 		
 			while($data = mysql_fetch_array($rep)) {
 			
-				if($data == 1) {
+				//echo $data;
+			
+				if($data['id'] == 1) {
 			        echo "<object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>";
 			        echo "<param name='movie' value='swf/player_flv_multi.swf' />";
 			        echo "<param name='allowFullScreen' value='true' />";
 			        echo "<param name='FlashVars' value='flv=/video/presentation.flv&amp;title=Présentation des membres&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />";
 					echo "</object>";
+					
 					mysql_query("
 					UPDATE `video` 
-					SET `id` = '0' 
-					WHERE `id` = '1' 
+					SET `id` = 0 
+					WHERE `id` = 1 
 					");
 				}
 				
-				elseif($data == 0) {
+				elseif($data['id'] == 0) {
 			        echo "<object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>";
 			        echo "<param name='movie' value='swf/player_flv_multi.swf' />";
 			        echo "<param name='allowFullScreen' value='true' />";
 			        echo "<param name='FlashVars' value='flv=/video/kaliente.flv&amp;title=Kaliente&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />";
 					echo "</object>";	
+					
 					mysql_query("
 					UPDATE `video` 
-					SET `id` = '1' 
-					WHERE `id` = '0' 
+					SET `id` = 1 
+					WHERE `id` = 0 
 					");					
 				}
 				else {
