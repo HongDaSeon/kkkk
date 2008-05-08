@@ -76,64 +76,13 @@ mysql_select_db($CFG['db']);
 			<h2 class='title'>Les vidéos de famille</h2>
 			<div class='content'>
 			<div class='video'>	
-		<?php
-		/*
-			$rep = mysql_query("
-			SELECT `id`
-			FROM `video`
-			");
-		
-			while($data = mysql_fetch_array($rep)) {
-			
-				//echo $data;
-			
-				if($data['id'] == 1) {
-			        echo "<object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>";
-			        echo "<param name='movie' value='swf/player_flv_multi.swf' />";
-			        echo "<param name='allowFullScreen' value='true' />";
-			        echo "<param name='FlashVars' value='flv=/video/presentation.flv&amp;title=Présentation des membres&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />";
-					echo "</object>";
-					
-					mysql_query("
-					UPDATE `video` 
-					SET `id` = 0 
-					WHERE `id` = 1 
-					");
-				}
-				
-				elseif($data['id'] == 0) {
-			        echo "<object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>";
-			        echo "<param name='movie' value='swf/player_flv_multi.swf' />";
-			        echo "<param name='allowFullScreen' value='true' />";
-			        echo "<param name='FlashVars' value='flv=/video/kaliente.flv&amp;title=Kaliente&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />";
-					echo "</object>";	
-					
-					mysql_query("
-					UPDATE `video` 
-					SET `id` = 1 
-					WHERE `id` = 0 
-					");					
-				}
-				else {
-					echo "<object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>";
-			        echo "<param name='movie' value='swf/player_flv_multi.swf' />";
-			        echo "<param name='allowFullScreen' value='true' />";
-			        echo "<param name='FlashVars' value='flv=/video/presentation.flv&amp;title=Présentation des membres&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />";        			        echo "<param name='FlashVars' value='flv=/video/kaliente.flv&amp;title=Kaliente&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />";
-			        echo "<param name='FlashVars' value='flv=/video/kaliente.flv&amp;title=Kaliente&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />";
 
-					echo "</object>";
-					
-				}
-			}*/
-		?>
-		
 <object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>
 <param name='movie' value='swf/player_flv_multi.swf' />
 <param name='allowFullScreen' value='true' />
 <param name='FlashVars' value='flv=/video/presentation.flv|/video/kaliente.flv&amp;title=Présentation des membres|Kaliente&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />
 </object>
-Choisissez votre vidéo grâce à la playlist ! <br />
-(le bouton à coté de play)
+Choisissez votre vidéo dans la playlist (ce bouton <img src='img/playlist.jpg' alt='playlist' />)
 
 			</div><!--fin du lecteur-->
 		</div><!--fin du content-->
