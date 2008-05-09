@@ -106,7 +106,8 @@ Choisissez votre vidéo dans la playlist (ce bouton <img src='img/playlist.jpg' a
 					'test' => 'test.html',
 					'pres' => 'fiche.php',
 					'soiree' => 'soiree.html',
-					'liste' => 'liste_poker.php'
+					'liste' => 'liste_poker.php',
+					'reponse' => 'reponse.php'
 					);
     $a = key($_GET);
       if(isset($lien[$a]))

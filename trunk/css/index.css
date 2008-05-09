@@ -10,6 +10,15 @@ body {
 	color: #333333;
 }
 
+#questionnaire
+{
+  text-align:left;
+  margin-left:60px;
+    font-size:medium;
+  
+
+}
+
 #goodies
 {
 text-align:center;
