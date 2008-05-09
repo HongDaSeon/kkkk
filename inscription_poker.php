@@ -79,7 +79,7 @@ if (
     if ($compt<1)
         { 
         mysql_query("INSERT INTO poker VALUES('', '$pseudo', '$nom', '$prenom', '$promo', '$mail')");
-        echo "Inscription enregistré";
+        echo "Inscription enregistrée";
         }
     else
         {
