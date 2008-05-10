@@ -17,6 +17,7 @@
            <option value="CPI2">CPI2</option>
            <option value="CPI1">CPI1</option>
            <option value="Anciens">Anciens</option>
+           <option value="Ext">Extérieur</option>
        </select>
        <br />
 
