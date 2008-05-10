@@ -16,7 +16,7 @@ mysql_select_db($CFG['db']);
     {
         echo "Participant n°$compt <br />";
         echo "Nom : <strong>${donnees['nom']} </strong><br />";
-        echo "Prénom :<strong> ${donnees['prenom']} </strong><br />";
+        echo "Pseudo :<strong> ${donnees['prenom']} </strong><br />";
         echo "Promo :<strong> ${donnees['promo']} </strong><br /><br />";
         $compt++;
     }
