@@ -1,7 +1,6 @@
   		<div class='boxed'>
 			<h2 class='title'>Un message à faire passer? </h2>
 			<div class='content'>
-
    <form method="post" action="index.php?livre">
       <fieldset>
         <p>
