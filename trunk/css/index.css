@@ -143,6 +143,17 @@ text-decoration:none;
 	padding-top: 20px;
 }
 
+/* Footer */
+
+#footer {
+	clear: both;
+	width: 760px;
+	height: 80px;
+	margin: 0 auto;
+	padding: 30px 50px;
+	background: url(./images/img07.gif) no-repeat center top;
+}
+
 .post {
 }
 
@@ -393,5 +404,6 @@ fieldset
     width:170px;
     height:200px;
 	}
+
 
 

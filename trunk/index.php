@@ -26,7 +26,10 @@ mysql_select_db($CFG['db']);
     <script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
     <script type="text/javascript" src="js/lightbox.js"></script> 
 		
-		
+	<!-- Test Ajax reduction div-->	
+	<script src="./aep/extensible.js" type="text/javascript"> </script>  
+	<script src="./aep/oneButton.js" type="text/javascript"></script>
+	
     </head>   
     
     
@@ -79,8 +82,8 @@ mysql_select_db($CFG['db']);
 
 <object type='application/x-shockwave-flash' data='swf/player_flv_multi.swf' width='320' height='240'>
 <param name='movie' value='swf/player_flv_multi.swf' />
-<param name='allowFullScreen' value='true' />
-<param name='FlashVars' value='flv=/video/presentation.flv|/video/kaliente.flv|/video/trailer.flv|/video/votez.flv&amp;title=Présentation des membres|Kaliente un BDE qui...|Le 13 Mai|Votez Kaliente&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />
+<param name='allowFullScreen' value='false' />
+<param name='FlashVars' value='flv=/video/presentation.flv|/video/kaliente.flv|/video/trailer.flv|/video/votez.flv|/video/kaliente_image.flv&amp;title=Présentation des membres|Kaliente un BDE qui...|Le 13 Mai|Votez Kaliente|Kaliente...&amp;autoload=1&amp;margin=3&amp;bgcolor=fdf39a&amp;bgcolor1=fdf39a&amp;bgcolor2=ffd83f&amp;showstop=1&amp;showtime=2&amp;showfullscreen=1&amp;playercolor=ffd83f&amp;showmouse=autohide&amp;currentflvcolor=f1246A&amp;playlisttextcolor=003400' />
 </object>
 Choisissez votre vidéo dans la playlist (ce bouton <img src='img/playlist.jpg' alt='playlist' />)
 
@@ -118,7 +121,11 @@ Choisissez votre vidéo dans la playlist (ce bouton <img src='img/playlist.jpg' a
 
 </div> <!--fin du content-->
 
-      
+<div id="footer">
+	<p id="legal">Copyright &copy; 2008 Kaliente. All Rights Reserved.</p>
+</div>
+</body>
+</html>
       </body>
 
 
